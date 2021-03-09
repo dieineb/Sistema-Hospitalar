@@ -122,6 +122,16 @@ public class TelaConsulta extends JPanel {
 		fieldNome.setColumns(10);
 		
 		btnLimparTela = new JButton("Limpar Tela");
+		btnLimparTela.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				fieldCPF.setText("");
+				fieldNome.setText("");
+				textAreaObservacoes.setText("");
+				textAreaQueixa.setText("");
+				textAreaAvaliacao.setText("");
+				textAreaMedicacao.setText("");
+			}
+		});
 		btnLimparTela.setActionCommand("Limpar Tela Atendimento");
 		add(btnLimparTela, "cell 0 10,alignx right");
 		
