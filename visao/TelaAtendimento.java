@@ -85,6 +85,18 @@ public class TelaAtendimento extends JPanel {
 		fieldCPF.setColumns(10);
 		
 		btnLimparTela = new JButton("Limpar Tela");
+		btnLimparTela.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				fieldCPF.setText("");
+				fieldNome.setText("");
+				textAreaObservacoes.setText("");
+				textAreaQueixa.setText("");
+			}
+		});
+
+
+
+
 		btnLimparTela.setActionCommand("Limpar Tela Atendimento");
 		add(btnLimparTela, "cell 0 8 2 1,alignx center");
 		
