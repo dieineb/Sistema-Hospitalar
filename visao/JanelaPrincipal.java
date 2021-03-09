@@ -26,8 +26,8 @@ public class JanelaPrincipal extends JFrame {
 	private TelaInicialLogo telaLogo;
 	private TelaAtendimento telaAtendimento;
 	private TelaConsulta telaConsulta;
-	//private TelaEncaminhar telaEncaminhar;
-	//private TelaFinalizarCadastro telaFinalizar;
+	private TelaEncaminharInternacao telaEncaminharInternacao;
+	private TelaFinalizarAtendimento telaFinalizarAtendimento;
 	//private TelaListarPacientesAguardando telaAguardar;
 	//private TelaListarPacientesInternados telaInternados;
 	//private TelaListarLeitosVagos telaLeitos;
@@ -206,9 +206,9 @@ public class JanelaPrincipal extends JFrame {
 		telaGerenciar = new TelaGerenciarPaciente();
 		telaAtendimento = new TelaAtendimento();
 		telaConsulta = new TelaConsulta();
-		/*telaEncaminhar = new TelaEncaminhar();
-		telaFinalizar = new TelaFinalizarCadastro();
-		telaAguardar = new TelaListarPacientesAguardando();
+		telaEncaminharInternacao = new TelaEncaminharInternacao();
+		telaFinalizarAtendimento = new TelaFinalizarAtendimento);
+		/*telaAguardar = new TelaListarPacientesAguardando();
 		telaInternados = new TelaListarPacientesInternados();
 		telaLeitos = new TelaListarLeitosVagos();*/
 		
@@ -216,9 +216,9 @@ public class JanelaPrincipal extends JFrame {
 		contentPane.add(telaGerenciar, "painel1");
 		contentPane.add(telaAtendimento,"painel2");
 		contentPane.add(telaConsulta,"painel3");
-		/*contentPane.add(telaEncaminhar,"painel4");
-		contentPane.add(telaFinalizar,"painel5");
-		contentPane.add(telaAguardar,"painel6");
+		contentPane.add(telaEncaminharInternacao,"painel4");
+		contentPane.add(telaFinalizarAtendimento,"painel5");
+		/*contentPane.add(telaAguardar,"painel6");
 		contentPane.add(telaInternados,"painel7");
 		contentPane.add(telaLeitos,"painel8");*/
 		
@@ -265,24 +265,24 @@ public class JanelaPrincipal extends JFrame {
 	public void setTelaConsulta(TelaConsulta telaConsulta) {
 		this.telaConsulta = telaConsulta;
 	}
-/*
-	public TelaEncaminhar getTelaEncaminhar() {
-		return telaEncaminhar;
+
+	public TelaEncaminharInternacao getTelaEncaminharInternacao() {
+		return telaEncaminharInternacao;
 	}
 
-	public void setTelaEncaminhar(TelaEncaminhar telaEncaminhar) {
-		this.telaEncaminhar = telaEncaminhar;
+	public void setTelaEncaminharInternacao(TelaEncaminharInternacao telaEncaminharInternacao) {
+		this.telaEncaminharInternacao = telaEncaminharInternacao;
 	}
 
-	public TelaFinalizarCadastro getTelaFinalizar() {
-		return telaFinalizar;
+	public TelaFinalizarAtendimento getTelaFinalizarAtendimento() {
+		return telaFinalizarAtendimento;
 	}
 
-	public void setTelaFinalizar(TelaFinalizarCadastro telaFinalizar) {
-		this.telaFinalizar = telaFinalizar;
+	public void setTelaFinalizarAtendimento(TelaFinalizarAtendimento telaFinalizarAtendimento) {
+		this.telaFinalizarAtendimento = telaFinalizarAtendimento;
 	}
 
-	public TelaListarPacientesAguardando getTelaAguardar() {
+	/*public TelaListarPacientesAguardando getTelaAguardar() {
 		return telaAguardar;
 	}
 
