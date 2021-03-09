@@ -1,6 +1,6 @@
 package modelo;
 
-public class Atendimento {
+public class ListaPacientes {
     
 	Paciente pessoa;
 	int horaChegada;
@@ -40,10 +40,10 @@ public class Atendimento {
 		this.mAtend = mAtend;
 	}
 
-	public Atendimento() {
+	public ListaPacientes() {
 	}
 
-	public Atendimento(Paciente pessoa, String data, int horaChegada, int minChegada) {
+	public ListaPacientes(Paciente pessoa, String data, int horaChegada, int minChegada) {
 		this.pessoa = pessoa;
 		this.data = data;
 		this.horaChegada = horaChegada;
