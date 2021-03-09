@@ -24,8 +24,8 @@ public class JanelaPrincipal extends JFrame {
 	private CardLayout card;
 	private TelaGerenciarPaciente telaGerenciar;
 	private TelaInicialLogo telaLogo;
-	//private TelaGerarCadastro telaCadastro;
-	//private TelaGerarConsulta telaConsulta;
+	private TelaAtendimento telaAtendimento;
+	private TelaConsulta telaConsulta;
 	//private TelaEncaminhar telaEncaminhar;
 	//private TelaFinalizarCadastro telaFinalizar;
 	//private TelaListarPacientesAguardando telaAguardar;
@@ -204,9 +204,9 @@ public class JanelaPrincipal extends JFrame {
 		//INSTANCIA TELAS
 		telaLogo = new TelaInicialLogo();
 		telaGerenciar = new TelaGerenciarPaciente();
-		/*telaCadastro = new TelaGerarCadastro();
-		telaConsulta = new TelaGerarConsulta();
-		telaEncaminhar = new TelaEncaminhar();
+		telaAtendimento = new TelaAtendimento();
+		telaConsulta = new TelaConsulta();
+		/*telaEncaminhar = new TelaEncaminhar();
 		telaFinalizar = new TelaFinalizarCadastro();
 		telaAguardar = new TelaListarPacientesAguardando();
 		telaInternados = new TelaListarPacientesInternados();
@@ -214,9 +214,9 @@ public class JanelaPrincipal extends JFrame {
 		
 		contentPane.add(telaLogo, "painel0");
 		contentPane.add(telaGerenciar, "painel1");
-		/*contentPane.add(telaCadastro,"painel2");
+		contentPane.add(telaAtendimento,"painel2");
 		contentPane.add(telaConsulta,"painel3");
-		contentPane.add(telaEncaminhar,"painel4");
+		/*contentPane.add(telaEncaminhar,"painel4");
 		contentPane.add(telaFinalizar,"painel5");
 		contentPane.add(telaAguardar,"painel6");
 		contentPane.add(telaInternados,"painel7");
@@ -250,22 +250,22 @@ public class JanelaPrincipal extends JFrame {
 		this.telaGerenciar = telaGerenciar;
 	}
 
-	/*public TelaGerarCadastro getTelaCadastro() {
-		return telaCadastro;
+	public TelaAdentimento getTelaAtendimento() {
+		return telaAtendimento;
 	}
 
-	public void setTelaCadastro(TelaGerarCadastro telaCadastro) {
-		this.telaCadastro = telaCadastro;
+	public void setTelaAtendimento(TelaAtendimento telaAtendimento) {
+		this.telaAtendimento = telaAtendimento;
 	}
 
-	public TelaGerarConsulta getTelaConsulta() {
+	public TelaConsulta getTelaConsulta() {
 		return telaConsulta;
 	}
 
-	public void setTelaConsulta(TelaGerarConsulta telaConsulta) {
+	public void setTelaConsulta(TelaConsulta telaConsulta) {
 		this.telaConsulta = telaConsulta;
 	}
-
+/*
 	public TelaEncaminhar getTelaEncaminhar() {
 		return telaEncaminhar;
 	}
