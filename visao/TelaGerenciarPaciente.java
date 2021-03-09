@@ -29,6 +29,8 @@ public class TelaGerenciarPaciente extends JPanel {
 	private JTextField fieldMae;
 	@SuppressWarnings("rawtypes")
 	private JComboBox comboBox;
+	private JButton buttonCadastrar;
+	private JButton buttonLimpar;
 
 	/**
 	 * Create the panel.
@@ -100,7 +102,7 @@ public class TelaGerenciarPaciente extends JPanel {
 	    comboBox.addItem("O+");
 	    comboBox.addItem("O-");		
 		
-		JButton buttonLimpar = new JButton("LIMPAR TELA");
+		buttonLimpar = new JButton("LIMPAR TELA");
 		buttonLimpar.setAlignmentY(Component.BOTTOM_ALIGNMENT);
 		buttonLimpar.setAlignmentX(Component.RIGHT_ALIGNMENT);
 		buttonLimpar.setSize(new Dimension(15, 0));
@@ -111,7 +113,7 @@ public class TelaGerenciarPaciente extends JPanel {
 			}
 		});
 		
-		JButton buttonCadastrar = new JButton("CADASTRAR PACIENTE");
+		buttonCadastrar = new JButton("CADASTRAR PACIENTE");
 		buttonCadastrar.setHorizontalAlignment(SwingConstants.RIGHT);
 		buttonCadastrar.setSize(new Dimension(11, 0));
 		add(buttonCadastrar, "cell 0 7");
@@ -142,5 +144,85 @@ public class TelaGerenciarPaciente extends JPanel {
 		paciente.setNomeMae(fieldMae.getText());
 		//paciente.setTipoSanguineo(comboBox.getSelectedItem());
 		}
+		public JTextField getFieldCPF() {
+			return fieldCPF;
+		}
+
+		public void setFieldCPF(JTextField fieldCPF) {
+			this.fieldCPF = fieldCPF;
+		}
+
+		public JTextField getFieldNascimento() {
+			return fieldNascimento;
+		}
+
+		public void setFieldNascimento(JTextField fieldNascimento) {
+			this.fieldNascimento = fieldNascimento;
+		}
+
+		public JTextField getFieldPai() {
+			return fieldPai;
+		}
+
+		public void setFieldPai(JTextField fieldPai) {
+			this.fieldPai = fieldPai;
+		}
+
+		public JTextField getFieldNome() {
+			return fieldNome;
+		}
+
+		public void setFieldNome(JTextField fieldNome) {
+			this.fieldNome = fieldNome;
+		}
+
+		public JTextField getFieldEndereco() {
+			return fieldEndereco;
+		}
+
+		public void setFieldEndereco(JTextField fieldEndereco) {
+			this.fieldEndereco = fieldEndereco;
+		}
+
+		public JTextField getFieldMae() {
+			return fieldMae;
+		}
+
+		public void setFieldMae(JTextField fieldMae) {
+			this.fieldMae = fieldMae;
+		}
+
+		public JComboBox getComboBox() {
+			return comboBox;
+		}
+
+		public void setComboBox(JComboBox comboBox) {
+			this.comboBox = comboBox;
+		}
+
+		public JButton getButtonLimpar() {
+			return buttonLimpar;
+		}
+
+		public void setButtonLimpar(JButton buttonLimpar) {
+			this.buttonLimpar = buttonLimpar;
+		}
+
+		public JButton getButtonCadastrar() {
+			return buttonCadastrar;
+		}
+
+		public void setButtonCadastrar(JButton buttonCadastrar) {
+			this.buttonCadastrar = buttonCadastrar;
+		}
+
+		public static long getSerialversionuid() {
+			return serialVersionUID;
+		}
+		
+
+
+
+
 
 }
