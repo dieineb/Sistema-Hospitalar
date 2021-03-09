@@ -28,9 +28,9 @@ public class JanelaPrincipal extends JFrame {
 	private TelaConsulta telaConsulta;
 	private TelaEncaminharInternacao telaEncaminharInternacao;
 	private TelaFinalizarAtendimento telaFinalizarAtendimento;
-	//private TelaListarPacientesAguardando telaAguardar;
-	//private TelaListarPacientesInternados telaInternados;
-	//private TelaListarLeitosVagos telaLeitos;
+	private TelaAguardando telaAguardar;
+	private TelaPacientesInternados telaInternados;
+	private TelaLeitosVagos telaLeitos;
 	private JMenuItem itemGerenciarPaciente;
 	private JMenuItem itemGerarAtendimento;
 	private JMenuItem itemEncaminhar;
@@ -38,7 +38,6 @@ public class JanelaPrincipal extends JFrame {
 	private JMenuItem itemListarPacientesAguardando;
 	private JMenuItem itemListarInternados;
 	private JMenuItem itemListarLeitosVagos;
-	private JLabel lblFotoLogo;
 
 
 	/**
@@ -65,7 +64,7 @@ public class JanelaPrincipal extends JFrame {
 		setFont(new Font("Franklin Gothic Demi", Font.ITALIC, 12));
 		setTitle("Sistema de Atendimento Hospitalar");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 561, 284);
+		setBounds(100, 100, 580, 460);
 		
 		JMenuBar menuBar = new JMenuBar();
 		setJMenuBar(menuBar);
@@ -207,10 +206,10 @@ public class JanelaPrincipal extends JFrame {
 		telaAtendimento = new TelaAtendimento();
 		telaConsulta = new TelaConsulta();
 		telaEncaminharInternacao = new TelaEncaminharInternacao();
-		telaFinalizarAtendimento = new TelaFinalizarAtendimento);
-		/*telaAguardar = new TelaListarPacientesAguardando();
-		telaInternados = new TelaListarPacientesInternados();
-		telaLeitos = new TelaListarLeitosVagos();*/
+		telaFinalizarAtendimento = new TelaFinalizarAtendimento();
+		telaAguardar = new TelaAguardando();
+		telaInternados = new TelaPacientesInternados();
+		telaLeitos = new TelaLeitosVagos();
 		
 		contentPane.add(telaLogo, "painel0");
 		contentPane.add(telaGerenciar, "painel1");
@@ -218,9 +217,9 @@ public class JanelaPrincipal extends JFrame {
 		contentPane.add(telaConsulta,"painel3");
 		contentPane.add(telaEncaminharInternacao,"painel4");
 		contentPane.add(telaFinalizarAtendimento,"painel5");
-		/*contentPane.add(telaAguardar,"painel6");
+		contentPane.add(telaAguardar,"painel6");
 		contentPane.add(telaInternados,"painel7");
-		contentPane.add(telaLeitos,"painel8");*/
+		contentPane.add(telaLeitos,"painel8");
 		
 	
 	}
@@ -250,7 +249,7 @@ public class JanelaPrincipal extends JFrame {
 		this.telaGerenciar = telaGerenciar;
 	}
 
-	public TelaAdentimento getTelaAtendimento() {
+	public TelaAtendimento getTelaAtendimento() {
 		return telaAtendimento;
 	}
 
@@ -282,29 +281,24 @@ public class JanelaPrincipal extends JFrame {
 		this.telaFinalizarAtendimento = telaFinalizarAtendimento;
 	}
 
-	/*public TelaListarPacientesAguardando getTelaAguardar() {
+	public TelaAguardando getTelaAguardar() {
 		return telaAguardar;
 	}
-
-	public void setTelaAguardar(TelaListarPacientesAguardando telaAguardar) {
+	public void setTelaAguardar(TelaAguardando telaAguardar) {
 		this.telaAguardar = telaAguardar;
 	}
-
-	public TelaListarPacientesInternados getTelaInternados() {
+	public TelaPacientesInternados getTelaInternados() {
 		return telaInternados;
 	}
-
-	public void setTelaInternados(TelaListarPacientesInternados telaInternados) {
+	public void setTelaInternados(TelaPacientesInternados telaInternados) {
 		this.telaInternados = telaInternados;
 	}
-
-	public TelaListarLeitosVagos getTelaLeitos() {
+	public TelaLeitosVagos getTelaLeitos() {
 		return telaLeitos;
 	}
-
-	public void setTelaLeitos(TelaListarLeitosVagos telaLeitos) {
+	public void setTelaLeitos(TelaLeitosVagos telaLeitos) {
 		this.telaLeitos = telaLeitos;
-	}*/
+	}
 
 	
 
@@ -314,6 +308,3 @@ public class JanelaPrincipal extends JFrame {
 	
 	
 	}
-
-    
-
