@@ -136,7 +136,7 @@ public class TelaGerenciarPaciente extends JPanel {
 		public void cadastrarPaciente() {
 		Paciente paciente = new Paciente();
 		paciente.setCpf(fieldCPF.getText());
-		paciente.setDataNascimento(fieldNascimento.getText());
+		paciente.setDataNasc(fieldNascimento.getText());
 		paciente.setEndereco(fieldEndereco.getText());
 		paciente.setNomePai(fieldPai.getText());
 		paciente.setNomeMae(fieldMae.getText());

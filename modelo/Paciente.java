@@ -1,54 +1,53 @@
 package modelo;
 
 public class Paciente {
-    private String nome;
 	private String cpf;
-	private int dataNascimento;
+	private String nome;
+	private String dataNasc;
 	private String endereco;
+	private String nomePai;
+	private String nomeMae;
 	private String tipoSanguineo;
-	private String NomePai;
-	private String NomeMae;
-
-	// Construtor 1 completo
-	public Paciente(String nome, String cpf, int dataNascimento, String endereco, String tipoSanguineo, String nomePai,
-			String nomeMae) {
-		super();
-		this.nome = nome;
-		this.cpf = cpf;
-		this.dataNascimento = dataNascimento;
-		this.endereco = endereco;
-		this.tipoSanguineo = tipoSanguineo;
-		this.NomePai = nomePai;
-		this.NomeMae = nomeMae;
-	}
-
-	// Construtor vazio
+	
+	//Contrutor vazio
 	public Paciente() {
+
+	}
+	//Contrutor
+	public Paciente(String cpf, String nome, String dataNasc, String endereco, String nomePai, String nomeMae,
+			String tipoSanguineo) {
 		super();
-	}
-
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
+		this.cpf = cpf;
 		this.nome = nome;
+		this.dataNasc = dataNasc;
+		this.endereco = endereco;
+		this.nomePai = nomePai;
+		this.nomeMae = nomeMae;
+		this.tipoSanguineo = tipoSanguineo;
 	}
 
 	public String getCpf() {
 		return cpf;
 	}
-
+	
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
-
-	public int getDataNascimento() {
-		return dataNascimento;
+	
+	public String getNome() {
+		return nome;
+	}
+	
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
-	public void setDataNascimento(int dataNascimento) {
-		this.dataNascimento = dataNascimento;
+	public String getDataNasc() {
+		return dataNasc;
+	}
+
+	public void setDataNasc(String dataNasc) {
+		this.dataNasc = dataNasc;
 	}
 
 	public String getEndereco() {
@@ -59,6 +58,22 @@ public class Paciente {
 		this.endereco = endereco;
 	}
 
+	public String getNomePai() {
+		return nomePai;
+	}
+
+	public void setNomePai(String nomePai) {
+		this.nomePai = nomePai;
+	}
+
+	public String getNomeMae() {
+		return nomeMae;
+	}
+
+	public void setNomeMae(String nomeMae) {
+		this.nomeMae = nomeMae;
+	}
+
 	public String getTipoSanguineo() {
 		return tipoSanguineo;
 	}
@@ -67,42 +82,8 @@ public class Paciente {
 		this.tipoSanguineo = tipoSanguineo;
 	}
 
-	public String getNomePai() {
-		return NomePai;
-	}
-
-	public void setNomePai(String nomePai) {
-		NomePai = nomePai;
-	}
-
-	public String getNomeMae() {
-		return NomeMae;
-	}
-
-	public void setNomeMae(String nomeMae) {
-		NomeMae = nomeMae;
-	}
-
-	//toString para impressão dos dados
-	public String toString() {
-		return "\nCPF" +getCpf()+"\n"
-				+"Nome:" +getNome() +"\n"
-				+"Data de Nascimento " +getDataNascimento()+"\n"
-				+"Tipo Sanguineo"+getTipoSanguineo()
-				+"Nome da Mae: "+getNomeMae()+"\n"
-				+"Nome do Pai: "+getNomePai()+"\n"
-				+"Endereço: "+getEndereco();
-		
-
 }
-	
-	
-	
-	
-	
-	
-	
-}
+
 
     
 
