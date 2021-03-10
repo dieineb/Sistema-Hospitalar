@@ -8,7 +8,7 @@ public static void main(String[] args) {
     JanelaPrincipal janela = new JanelaPrincipal();
     janela.setVisible(true);
 
-    ControlePrincipal controlePrincipal = new ControlePrincipal();
+    ControlePrincipal controlePrincipal = new ControlePrincipal(janela);
     
 }
     

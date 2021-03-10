@@ -21,7 +21,7 @@ public class ControlePrincipal implements ActionListener {
 
 	PacienteDAO pacienteDAO = new PacienteDAO();
 
-	public ControlePrincipal() {
+	public ControlePrincipal(JanelaPrincipal janela) {
 		this.janela = janela;
 
 		this.janela.getContentPane().add(telaPaciente, "painel2"); // Adiciona ao contentPane da janela principal a tela
