@@ -31,6 +31,7 @@ public class TelaGerenciarPaciente extends JPanel {
 	private JComboBox comboBox;
 	private JButton buttonCadastrar;
 	private JButton buttonLimpar;
+	private JComboBox<String> comboBoxTipoSanguineo;
 
 	/**
 	 * Create the panel.
@@ -89,7 +90,7 @@ public class TelaGerenciarPaciente extends JPanel {
 		JLabel labelTipo = new JLabel("Tipo Sangu\u00EDneo");
 		add(labelTipo, "flowx,cell 0 5");
 		
-		@SuppressWarnings({ "rawtypes"})
+		/*@SuppressWarnings({ "rawtypes"})
 		JComboBox comboBox = new JComboBox();
 		add(comboBox, "cell 0 5");
 		comboBox.addItem("  ");
@@ -100,7 +101,20 @@ public class TelaGerenciarPaciente extends JPanel {
 	    comboBox.addItem("AB+");
 	    comboBox.addItem("AB-");
 	    comboBox.addItem("O+");
-	    comboBox.addItem("O-");		
+	    comboBox.addItem("O-");*/
+		comboBoxTipoSanguineo = new JComboBox<>();
+		comboBoxTipoSanguineo.setFont(new Font("Verdana", Font.PLAIN, 12));
+		add(comboBoxTipoSanguineo, "cell 0 5,growx");
+		
+		// Adicionando os tipos sanguineos no comboBox
+		comboBoxTipoSanguineo.addItem("A+");
+		comboBoxTipoSanguineo.addItem("A-");
+		comboBoxTipoSanguineo.addItem("B+");
+		comboBoxTipoSanguineo.addItem("B-");
+		comboBoxTipoSanguineo.addItem("O+");
+		comboBoxTipoSanguineo.addItem("O-");
+		comboBoxTipoSanguineo.addItem("AB+");
+		comboBoxTipoSanguineo.addItem("AB-");		
 		
 		buttonLimpar = new JButton("LIMPAR TELA");
 		buttonLimpar.setAlignmentY(Component.BOTTOM_ALIGNMENT);
@@ -130,6 +144,7 @@ public class TelaGerenciarPaciente extends JPanel {
 			fieldEndereco.setText("");
 			fieldPai.setText("");
 			fieldMae.setText("");
+			fieldNascimento.setText("");
 			//comboBox.setSelectedIndex(0);
 		}
 		
