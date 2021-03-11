@@ -18,8 +18,7 @@ public class PacienteControle implements ActionListener {
 	ListaPaciente listaPaciente;
 	PacienteDAO pacienteDAO;
 
-	/* controle da tela Gerenciar Paciente recebe todos os objetos necessarios ja
-	 inicializados no controle principal*/
+	/* controle da tela Gerenciar Paciente recebe todos os objetos necessarios ja inicializados no controle principal*/
 	public PacienteControle(JanelaPrincipal janela, TelaGerenciarPaciente telaPaciente, ListaPaciente listaPacientes,
 			PacienteDAO pacienteDAO) {
 		this.janela = janela;
@@ -77,10 +76,9 @@ public class PacienteControle implements ActionListener {
 			String endereco = telaPaciente.getFieldEndereco().getText();
 			String nomePai = telaPaciente.getFieldPai().getText();
 			String nomeMae = telaPaciente.getFieldMae().getText();
-			//String tipoSanguineo = (String) telaPaciente.getComboBoxTipoSanguineo().getSelectedItem();ERRO
+			String tipoSanguineo = (String) telaPaciente.getComboBoxTipoSanguineo().getSelectedItem();
 		
-			paciente = new Paciente(cpf, nome, dataNasc, endereco, nomePai, nomeMae, "tipoSanguineo");//tipo sanguineo ComboBox esta dando ERRO
-
+			paciente = new Paciente(cpf, nome, dataNasc, endereco, nomePai, nomeMae, tipoSanguineo);
 		}
 
 		return paciente;
@@ -98,7 +96,19 @@ public class PacienteControle implements ActionListener {
 	}
 
 	public void limparCamposPaciente() {
+			
+			telaPaciente.getFieldCPF().setText("");
+			telaPaciente.getFieldNome().setText("");
+			telaPaciente.getFieldNascimento().setText("");
+			telaPaciente.getFieldEndereco().setText("");
+			telaPaciente.getFieldPai().setText("");
+			telaPaciente.getFieldMae().setText("");
+			telaPaciente.getComboBoxTipoSanguineo().setSelectedItem("A+");
+			
+		}
 
 	}
 
-}
+
+
+

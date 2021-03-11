@@ -1,5 +1,6 @@
 package visao;
 
+
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -29,8 +30,8 @@ public class TelaGerenciarPaciente extends JPanel {
 	private JTextField fieldMae;
 	@SuppressWarnings("rawtypes")
 	private JComboBox comboBox;
-	private JButton buttonCadastrar;
 	private JButton buttonLimpar;
+	private JButton buttonCadastrar;
 	private JComboBox<String> comboBoxTipoSanguineo;
 
 	/**
@@ -72,7 +73,7 @@ public class TelaGerenciarPaciente extends JPanel {
 		add(fieldPai, "cell 0 4");
 		fieldPai.setColumns(20);
 		
-		JLabel labelMae = new JLabel("Nome da M\u00E3e:");
+		JLabel labelMae = new JLabel("Nome da Mãe:");
 		add(labelMae, "flowx,cell 2 4");
 		
 		fieldNome = new JTextField();
@@ -87,11 +88,11 @@ public class TelaGerenciarPaciente extends JPanel {
 		add(fieldMae, "cell 2 4");
 		fieldMae.setColumns(20);
 		
-		JLabel labelTipo = new JLabel("Tipo Sangu\u00EDneo");
+		JLabel labelTipo = new JLabel("Tipo Sanguíneo");
 		add(labelTipo, "flowx,cell 0 5");
 		
-		/*@SuppressWarnings({ "rawtypes"})
-		JComboBox comboBox = new JComboBox();
+		//*@SuppressWarnings({ "rawtypes"})
+		/*comboBox = new JComboBox();
 		add(comboBox, "cell 0 5");
 		comboBox.addItem("  ");
 	    comboBox.addItem("A+");
@@ -101,7 +102,7 @@ public class TelaGerenciarPaciente extends JPanel {
 	    comboBox.addItem("AB+");
 	    comboBox.addItem("AB-");
 	    comboBox.addItem("O+");
-	    comboBox.addItem("O-");*/
+	    comboBox.addItem("O-");		*/
 		comboBoxTipoSanguineo = new JComboBox<>();
 		comboBoxTipoSanguineo.setFont(new Font("Verdana", Font.PLAIN, 12));
 		add(comboBoxTipoSanguineo, "cell 0 5,growx");
@@ -114,7 +115,9 @@ public class TelaGerenciarPaciente extends JPanel {
 		comboBoxTipoSanguineo.addItem("O+");
 		comboBoxTipoSanguineo.addItem("O-");
 		comboBoxTipoSanguineo.addItem("AB+");
-		comboBoxTipoSanguineo.addItem("AB-");		
+		comboBoxTipoSanguineo.addItem("AB-");
+		
+		
 		
 		buttonLimpar = new JButton("LIMPAR TELA");
 		buttonLimpar.setAlignmentY(Component.BOTTOM_ALIGNMENT);
@@ -131,13 +134,17 @@ public class TelaGerenciarPaciente extends JPanel {
 		buttonCadastrar.setHorizontalAlignment(SwingConstants.RIGHT);
 		buttonCadastrar.setSize(new Dimension(11, 0));
 		add(buttonCadastrar, "cell 0 7");
-		buttonCadastrar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) { 
-				cadastrarPaciente();
-			}
-		});
+		
 	}
 		
+		public JComboBox<String> getComboBoxTipoSanguineo() {
+		return comboBoxTipoSanguineo;
+	}
+
+	public void setComboBoxTipoSanguineo(JComboBox<String> comboBoxTipoSanguineo) {
+		this.comboBoxTipoSanguineo = comboBoxTipoSanguineo;
+	}
+
 		public void limparTela() {
 			fieldNome.setText("");
 			fieldCPF.setText("");
@@ -159,6 +166,7 @@ public class TelaGerenciarPaciente extends JPanel {
 		paciente.setNomeMae(fieldMae.getText());
 		//paciente.setTipoSanguineo(comboBox.getSelectedItem());
 		}
+
 		public JTextField getFieldCPF() {
 			return fieldCPF;
 		}
@@ -235,9 +243,8 @@ public class TelaGerenciarPaciente extends JPanel {
 			return serialVersionUID;
 		}
 		
-
-
-
-
+		
+		
+		
 
 }
