@@ -212,6 +212,12 @@ public class JanelaPrincipal extends JFrame {
 		telaLeitos = new TelaLeitosVagos();
 		
 		contentPane.add(telaLogo, "painel0");
+		JPanel panel = new JPanel();
+		telaLogo.add(panel, BorderLayout.NORTH);
+		
+		JLabel lblImagem = new JLabel("");
+		lblImagem.setIcon(new ImageIcon(JanelaPrincipal.class.getResource("/imagens/medical-logo.png")));
+		panel.add(lblImagem);
 		contentPane.add(telaGerenciar, "painel1");
 		contentPane.add(telaAtendimento,"painel2");
 		contentPane.add(telaConsulta,"painel3");
