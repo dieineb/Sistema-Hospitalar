@@ -11,9 +11,7 @@ import net.miginfocom.swing.MigLayout;
 
 public class TelaAguardando extends JPanel {
 
-	/**
-	 * 
-	 */
+	//declaracao das variaveis/componentes
 	private static final long serialVersionUID = 1L;
 	private JScrollPane scrollPaneCardio;
 	private JScrollPane scrollPanePediatrica;
@@ -27,12 +25,12 @@ public class TelaAguardando extends JPanel {
 	
 	public TelaAguardando() {
 		
-		
-		setLayout(new MigLayout("", "[grow][grow]", "[][][][grow][][grow]"));
+		setLayout(new MigLayout("", "[grow][grow]", "[][][][grow][][grow]")); //utilizacao miglayout
 		JLabel labelAguardandoLeitos = new JLabel("PACIENTES AGUARDANDO LEITO (por ala)");
 		labelAguardandoLeitos.setFont(new Font("Dialog", Font.BOLD, 20));
 		add(labelAguardandoLeitos, "cell 0 0 2 1");
 		
+		//adicionando os componentes
 		JLabel lblCardio = new JLabel("CARDIOLOGIA:");
 		add(lblCardio, "cell 0 2");
 		
@@ -68,11 +66,10 @@ public class TelaAguardando extends JPanel {
 		
 		JTextArea textAreaPneumologia = new JTextArea();
 		scrollPanePneumologia.setViewportView(textAreaPneumologia);
-		
 
 	}
 
-
+	//getters e setters
 	public JScrollPane getScrollPaneCardio() {
 		return scrollPaneCardio;
 	}
