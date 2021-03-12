@@ -11,9 +11,7 @@ import net.miginfocom.swing.MigLayout;
 
 public class TelaPacientesInternados extends JPanel {
 
-	/**
-	 * 
-	 */
+	//declaracao componentes/variaveis
 	private static final long serialVersionUID = 1L;
 	private JScrollPane scrollPaneCardioInternados;
 	private JScrollPane scrollPanePediatricaInternados;
@@ -30,6 +28,7 @@ public class TelaPacientesInternados extends JPanel {
 		labelPacientesInternados.setFont(new Font("Dialog", Font.BOLD, 20));
 		add(labelPacientesInternados, "cell 0 0 2 1");
 		
+		//adicionando componentes
 		JLabel lblCardio = new JLabel("CARDIOLOGIA:");
 		add(lblCardio, "cell 0 2");
 		
@@ -64,77 +63,74 @@ public class TelaPacientesInternados extends JPanel {
 		add(scrollPanePneumologiaInternados, "cell 1 5,grow");
 		
 		JTextArea textAreaPneumologiaInternados = new JTextArea();
-		scrollPanePneumologiaInternados.setViewportView(textAreaPneumologiaInternados);
-		
-		
-		
+		scrollPanePneumologiaInternados.setViewportView(textAreaPneumologiaInternados);	
 		
 
 	}
+		//getters e setters
+		public JScrollPane getScrollPaneCardioInternados() {
+			return scrollPaneCardioInternados;
+		}
 
-	public JScrollPane getScrollPaneCardioInternados() {
-		return scrollPaneCardioInternados;
+		public void setScrollPaneCardioInternados(JScrollPane scrollPaneCardioInternados) {
+			this.scrollPaneCardioInternados = scrollPaneCardioInternados;
+		}
+
+		public JScrollPane getScrollPanePediatricaInternados() {
+			return scrollPanePediatricaInternados;
+		}
+
+		public void setScrollPanePediatricaInternados(JScrollPane scrollPanePediatricaInternados) {
+			this.scrollPanePediatricaInternados = scrollPanePediatricaInternados;
+		}
+
+		public JScrollPane getScrollPaneNeurologiaInternados() {
+			return scrollPaneNeurologiaInternados;
+		}
+
+		public void setScrollPaneNeurologiaInternados(JScrollPane scrollPaneNeurologiaInternados) {
+			this.scrollPaneNeurologiaInternados = scrollPaneNeurologiaInternados;
+		}
+
+		public JScrollPane getScrollPanePneumologiaInternados() {
+			return scrollPanePneumologiaInternados;
+		}
+
+		public void setScrollPanePneumologiaInternados(JScrollPane scrollPanePneumologiaInternados) {
+			this.scrollPanePneumologiaInternados = scrollPanePneumologiaInternados;
+		}
+
+		public JTextArea getTextAreaCardioInternados() {
+			return textAreaCardioInternados;
+		}
+
+		public void setTextAreaCardioInternados(JTextArea textAreaCardioInternados) {
+			this.textAreaCardioInternados = textAreaCardioInternados;
+		}
+
+		public JTextArea getTextAreaPediatricaInternados() {
+			return textAreaPediatricaInternados;
+		}
+
+		public void setTextAreaPediatricaInternados(JTextArea textAreaPediatricaInternados) {
+			this.textAreaPediatricaInternados = textAreaPediatricaInternados;
+		}
+
+		public JTextArea getTextAreaNeurologiaInternados() {
+			return textAreaNeurologiaInternados;
+		}
+
+		public void setTextAreaNeurologiaInternados(JTextArea textAreaNeurologiaInternados) {
+			this.textAreaNeurologiaInternados = textAreaNeurologiaInternados;
+		}
+
+		public JTextArea getTextAreaPneumologiaInternados() {
+			return textAreaPneumologiaInternados;
+		}
+
+		public void setTextAreaPneumologiaInternados(JTextArea textAreaPneumologiaInternados) {
+			this.textAreaPneumologiaInternados = textAreaPneumologiaInternados;
+		}
+
+
 	}
-
-	public void setScrollPaneCardioInternados(JScrollPane scrollPaneCardioInternados) {
-		this.scrollPaneCardioInternados = scrollPaneCardioInternados;
-	}
-
-	public JScrollPane getScrollPanePediatricaInternados() {
-		return scrollPanePediatricaInternados;
-	}
-
-	public void setScrollPanePediatricaInternados(JScrollPane scrollPanePediatricaInternados) {
-		this.scrollPanePediatricaInternados = scrollPanePediatricaInternados;
-	}
-
-	public JScrollPane getScrollPaneNeurologiaInternados() {
-		return scrollPaneNeurologiaInternados;
-	}
-
-	public void setScrollPaneNeurologiaInternados(JScrollPane scrollPaneNeurologiaInternados) {
-		this.scrollPaneNeurologiaInternados = scrollPaneNeurologiaInternados;
-	}
-
-	public JScrollPane getScrollPanePneumologiaInternados() {
-		return scrollPanePneumologiaInternados;
-	}
-
-	public void setScrollPanePneumologiaInternados(JScrollPane scrollPanePneumologiaInternados) {
-		this.scrollPanePneumologiaInternados = scrollPanePneumologiaInternados;
-	}
-
-	public JTextArea getTextAreaCardioInternados() {
-		return textAreaCardioInternados;
-	}
-
-	public void setTextAreaCardioInternados(JTextArea textAreaCardioInternados) {
-		this.textAreaCardioInternados = textAreaCardioInternados;
-	}
-
-	public JTextArea getTextAreaPediatricaInternados() {
-		return textAreaPediatricaInternados;
-	}
-
-	public void setTextAreaPediatricaInternados(JTextArea textAreaPediatricaInternados) {
-		this.textAreaPediatricaInternados = textAreaPediatricaInternados;
-	}
-
-	public JTextArea getTextAreaNeurologiaInternados() {
-		return textAreaNeurologiaInternados;
-	}
-
-	public void setTextAreaNeurologiaInternados(JTextArea textAreaNeurologiaInternados) {
-		this.textAreaNeurologiaInternados = textAreaNeurologiaInternados;
-	}
-
-	public JTextArea getTextAreaPneumologiaInternados() {
-		return textAreaPneumologiaInternados;
-	}
-
-	public void setTextAreaPneumologiaInternados(JTextArea textAreaPneumologiaInternados) {
-		this.textAreaPneumologiaInternados = textAreaPneumologiaInternados;
-	}
-
-
-}
