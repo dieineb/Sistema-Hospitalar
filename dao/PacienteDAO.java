@@ -13,7 +13,7 @@ import java.util.List;
 import modelo.Paciente;
 
 public class PacienteDAO {
-	private static List<Paciente> pacientesNoHospital;
+	private static List<Paciente> pacientesNoHospital = new ArrayList();
 
 	private final static String txtASerMudado = "pacientes";
 	private final static String path = UtilDAO.pathParaDataMultiSO(txtASerMudado);
@@ -35,7 +35,7 @@ public class PacienteDAO {
 			String nmPai, String nmMae) {
 
 		try (BufferedWriter bw = new BufferedWriter(new FileWriter(path, true))) {
-			bw.write(String.format("%s,%s,%d,%s,%s,%s,%s", nmPaciente,cpf, dtNascimento, endereco, tpSanguineo, nmPai, nmMae));
+			bw.write(String.format("%s,%s,%s,%s,%s,%s,%s", nmPaciente,cpf, dtNascimento, endereco, tpSanguineo, nmPai, nmMae));
 			bw.newLine();
 			return true;
 
