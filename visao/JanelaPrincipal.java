@@ -40,25 +40,6 @@ public class JanelaPrincipal extends JFrame {
 	private JMenuItem itemListarLeitosVagos;
 
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					JanelaPrincipal frame = new JanelaPrincipal();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
-	 * Create the frame.
-	 */
 	//frame principal
 	public JanelaPrincipal() {
 		setFont(new Font("Franklin Gothic Demi", Font.ITALIC, 12));
@@ -306,11 +287,10 @@ public class JanelaPrincipal extends JFrame {
 		this.telaLeitos = telaLeitos;
 	}
 
-	
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
 	
 	
-	}
+}
