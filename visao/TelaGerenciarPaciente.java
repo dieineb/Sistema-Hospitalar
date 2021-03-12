@@ -17,10 +17,10 @@ import javax.swing.SwingConstants;
 import modelo.Paciente;
 import net.miginfocom.swing.MigLayout;
 
-public class TelaGerenciarPaciente extends JPanel {
-	/**
-	 * 
-	 */
+public class TelaGerenciarPaciente extends JPanel {	//todas as telas (com exceção da JanelaPrincipal, que é JFrame)
+							//são JPanel, em razão do cardLayout
+	
+	//declaração de variáveis/contents
 	private static final long serialVersionUID = 1L;
 	private JTextField fieldCPF;
 	private JTextField fieldNascimento;
@@ -28,19 +28,16 @@ public class TelaGerenciarPaciente extends JPanel {
 	private JTextField fieldNome;
 	private JTextField fieldEndereco;
 	private JTextField fieldMae;
-	@SuppressWarnings("rawtypes")
-	private JComboBox comboBox;
 	private JButton buttonLimpar;
 	private JButton buttonCadastrar;
 	private JComboBox<String> comboBoxTipoSanguineo;
 
-	/**
-	 * Create the panel.
-	 */
 	@SuppressWarnings("unchecked")
 	public TelaGerenciarPaciente() {
-		setLayout(new MigLayout("", "[][][]", "[][][][][][][][]"));
+		setLayout(new MigLayout("", "[][][]", "[][][][][][][][]"));	//utilização do MigLayout
 		
+		//adicionando os componentes
+		//(labels, fieldAreas, buttons, combobox)
 		JLabel labelTituloGerenciar = new JLabel("GERENCIAR PACIENTE");
 		labelTituloGerenciar.setFont(new Font("Arial Unicode MS", Font.BOLD, 20));
 		add(labelTituloGerenciar, "cell 0 0");
@@ -91,18 +88,7 @@ public class TelaGerenciarPaciente extends JPanel {
 		JLabel labelTipo = new JLabel("Tipo Sanguíneo");
 		add(labelTipo, "flowx,cell 0 5");
 		
-		//*@SuppressWarnings({ "rawtypes"})
-		/*comboBox = new JComboBox();
-		add(comboBox, "cell 0 5");
-		comboBox.addItem("  ");
-	    comboBox.addItem("A+");
-	    comboBox.addItem("A-");
-	    comboBox.addItem("B+");
-	    comboBox.addItem("B-");
-	    comboBox.addItem("AB+");
-	    comboBox.addItem("AB-");
-	    comboBox.addItem("O+");
-	    comboBox.addItem("O-");		*/
+		//instanciamento do combobox		
 		comboBoxTipoSanguineo = new JComboBox<>();
 		comboBoxTipoSanguineo.setFont(new Font("Verdana", Font.PLAIN, 12));
 		add(comboBoxTipoSanguineo, "cell 0 5,growx");
@@ -117,34 +103,29 @@ public class TelaGerenciarPaciente extends JPanel {
 		comboBoxTipoSanguineo.addItem("AB+");
 		comboBoxTipoSanguineo.addItem("AB-");
 		
-		
-		
+		//criação do botão "Limpar Tela"		
 		buttonLimpar = new JButton("LIMPAR TELA");
 		buttonLimpar.setAlignmentY(Component.BOTTOM_ALIGNMENT);
 		buttonLimpar.setAlignmentX(Component.RIGHT_ALIGNMENT);
 		buttonLimpar.setSize(new Dimension(15, 0));
 		add(buttonLimpar, "flowx,cell 0 7");
+		//acao para o metodo limpar 
 		buttonLimpar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) { 
-				limparTela();
+				limparTela();			//metodo
 			}
 		});
 		
+		//criacao do botao "cadastrar paciente"
 		buttonCadastrar = new JButton("CADASTRAR PACIENTE");
 		buttonCadastrar.setHorizontalAlignment(SwingConstants.RIGHT);
 		buttonCadastrar.setSize(new Dimension(11, 0));
 		add(buttonCadastrar, "cell 0 7");
-		
-	}
-		
-		public JComboBox<String> getComboBoxTipoSanguineo() {
-		return comboBoxTipoSanguineo;
-	}
+		//diferentemente do botao limpar, a acao 
+		//do botao cadastrar é feita no pacote controle
+		}
 
-	public void setComboBoxTipoSanguineo(JComboBox<String> comboBoxTipoSanguineo) {
-		this.comboBoxTipoSanguineo = comboBoxTipoSanguineo;
-	}
-
+		//CRIACAO METODO PARA A ACAO LIMPAR TELA
 		public void limparTela() {
 			fieldNome.setText("");
 			fieldCPF.setText("");
@@ -155,10 +136,9 @@ public class TelaGerenciarPaciente extends JPanel {
 			//comboBox.setSelectedIndex(0);
 		}
 		
-		// instanciando a classe paciente
-		
+		//CRIANDO O METODO PARA CADASTRAR PACIENTE
 		public void cadastrarPaciente() {
-		Paciente paciente = new Paciente();
+		Paciente paciente = new Paciente();		//instanciando a classe paciente
 		paciente.setCpf(fieldCPF.getText());
 		paciente.setDataNasc(fieldNascimento.getText());
 		paciente.setEndereco(fieldEndereco.getText());
@@ -167,6 +147,7 @@ public class TelaGerenciarPaciente extends JPanel {
 		//paciente.setTipoSanguineo(comboBox.getSelectedItem());
 		}
 
+		//getters e setters
 		public JTextField getFieldCPF() {
 			return fieldCPF;
 		}
@@ -215,14 +196,14 @@ public class TelaGerenciarPaciente extends JPanel {
 			this.fieldMae = fieldMae;
 		}
 
-		public JComboBox getComboBox() {
-			return comboBox;
+		public JComboBox<String> getComboBoxTipoSanguineo() {
+		return comboBoxTipoSanguineo;
 		}
 
-		public void setComboBox(JComboBox comboBox) {
-			this.comboBox = comboBox;
+		public void setComboBoxTipoSanguineo(JComboBox<String> comboBoxTipoSanguineo) {
+		this.comboBoxTipoSanguineo = comboBoxTipoSanguineo;
 		}
-
+	
 		public JButton getButtonLimpar() {
 			return buttonLimpar;
 		}
