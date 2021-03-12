@@ -13,7 +13,7 @@ import java.util.List;
 import modelo.Paciente;
 
 public class PacienteDAO {
-	private List<Paciente> pacientesNoHospital;
+	private static List<Paciente> pacientesNoHospital;
 
 	private final static String txtASerMudado = "pacientes";
 	private final static String path = UtilDAO.pathParaDataMultiSO(txtASerMudado);
