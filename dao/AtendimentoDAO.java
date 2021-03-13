@@ -19,7 +19,7 @@ public class AtendimentoDAO {
 	
 	//Alas para o atendimento
 	private static List<Atendimento> cardiologia = new ArrayList();
-	private static List<Atendimento> padiatrica = new ArrayList();
+	private static List<Atendimento> pediatrica = new ArrayList();
 	private static List<Atendimento> pneumologia = new ArrayList();
 	private static List<Atendimento> neurologia = new ArrayList();
 	
@@ -41,9 +41,26 @@ public class AtendimentoDAO {
 			case 4:
 				filaDeEspera4.add(atendime);
 				return true;
-			default:
-				return false;}
-			
+			case 5:
+				if(atendime.getAla().equals("cardiologia")) {
+					cardiologia.add(atendime);
+					return true;
+				}else if(atendime.getAla().equals("pediatrica")) {
+				
+					pediatrica.add(atendime);
+					return true;
+					
+				}else if(atendime.getAla().equals("pneumologia")) {
+					
+					pneumologia.add(atendime);
+					return true;
+				}else if(atendime.getAla().equals("neurologia")) {
+
+					neurologia.add(atendime);
+					return true;
+				}else {return false;}
+				
+			}
 		}
 	
 	public static boolean gerarAtendimento(Atendimento atendime, String ala) throws Exception {
@@ -69,7 +86,7 @@ public class AtendimentoDAO {
 	
 	
 	
-	public boolean adicionarAtendimentoNoTxtRemoverDoHospital(Atendimento atendime) {
+	public boolean adicionarItemTxtRemoverDoHospital(Atendimento atendime) {
 
 		try (BufferedWriter bw = new BufferedWriter(new FileWriter(path, true))) {
 			bw.write(String.format("%s,%s,%s,%d,%s,%s,%s", atendime.getPessoa().getNome(),
