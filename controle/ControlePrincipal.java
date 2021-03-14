@@ -24,8 +24,7 @@ public class ControlePrincipal implements ActionListener {
 	public ControlePrincipal(JanelaPrincipal janela) {
 		this.janela = janela;
 
-		this.janela.getContentPane().add(telaPaciente, "painel2"); // Adiciona ao contentPane da janela principal a tela
-																	// Gerenciar Paciente, permtindo a transicao
+		this.janela.getContentPane().add(telaPaciente, "painel2"); 
 
 		this.janela.getItemGerenciarPaciente().addActionListener(this);
 	}
@@ -35,7 +34,7 @@ public class ControlePrincipal implements ActionListener {
 		// TODO Auto-generated method stub
 		if (e.getActionCommand().equals("gerenciar-paciente")) {
 
-			// Quando ir para a tela Gerenciar Paciente, cria um objeto de PacienteControle
+			
 			pacienteControle = new PacienteControle(janela, telaPaciente, listaPacientes, pacienteDAO);
 
 		}

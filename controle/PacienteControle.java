@@ -18,7 +18,7 @@ public class PacienteControle implements ActionListener {
 	ListaPaciente listaPaciente;
 	PacienteDAO pacienteDAO;
 
-	/* controle da tela Gerenciar Paciente recebe todos os objetos necessarios ja inicializados no controle principal*/
+	
 	public PacienteControle(JanelaPrincipal janela, TelaGerenciarPaciente telaPaciente, ListaPaciente listaPacientes,
 			PacienteDAO pacienteDAO) {
 		this.janela = janela;
@@ -41,9 +41,9 @@ public class PacienteControle implements ActionListener {
 			if (paciente == null) {
 				System.out.println("Preencha todos os campos!");
 			} else {
-				listaPaciente.adicionarPaciente(paciente); // Adicionar o paciente da lista de pacientes
+				listaPaciente.adicionarPaciente(paciente); 
 
-				boolean retorno = pacienteDAO.cadastraPaciente(paciente); // Persiste os dados do paciente em um arquivo
+				boolean retorno = pacienteDAO.cadastraPaciente(paciente); 
 
 				if (retorno) {
 					System.out.println("Paciente cadastrado com sucesso!");
