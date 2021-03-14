@@ -7,7 +7,7 @@ public class ListaPaciente {
 	public void adicionarPaciente(Paciente p) {
 		listaPaciente.add(p);
 		
-		System.out.println("Paciente: " + listaPaciente.getFirst()); //adiciona pacientes a lista
+	
 	}
 	
 }
