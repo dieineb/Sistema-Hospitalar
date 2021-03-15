@@ -8,10 +8,26 @@ public class Atendimento {
 	private String queixa;
 	private String ala;
 	private String obs;
+	
+	private String avaliacaoMedica;
+	private String medicacaoPrescrita;
+
 
 	public Atendimento() {
 	}
 
+	public Atendimento(Paciente pessoa, String dhInternacao, int prioridade, String queixa,String obs) {
+		super();
+		this.pessoa = pessoa;
+		this.dhInternacao = dhInternacao;
+		this.prioridade = prioridade;
+		this.queixa = queixa;
+		this.obs = obs;
+		this.setAvaliacaoMedica(null);
+		this.setMedicacaoPrescrita(null);
+		this.ala = null;
+	}
+	
 	public Atendimento(Paciente pessoa, String dhInternacao, int prioridade, String queixa, String ala, String obs) {
 		super();
 		this.pessoa = pessoa;
@@ -20,7 +36,24 @@ public class Atendimento {
 		this.queixa = queixa;
 		this.ala = ala;
 		this.obs = obs;
+		this.setAvaliacaoMedica(null);
+		this.setMedicacaoPrescrita(null);
 	}
+	
+	public Atendimento(Paciente pessoa, String dhInternacao, int prioridade, String queixa, String ala, String obs,
+			String avaliacaoMedica, String medicacaoPrescrita) {
+		super();
+		this.pessoa = pessoa;
+		this.dhInternacao = dhInternacao;
+		this.prioridade = prioridade;
+		this.queixa = queixa;
+		this.ala = ala;
+		this.obs = obs;
+		this.setAvaliacaoMedica(avaliacaoMedica);
+		this.setMedicacaoPrescrita(medicacaoPrescrita);
+	}
+	
+	
 
 	public Paciente getPessoa() {
 		return pessoa;
@@ -68,6 +101,22 @@ public class Atendimento {
 
 	public void setObs(String obs) {
 		this.obs = obs;
+	}
+
+	public String getAvaliacaoMedica() {
+		return avaliacaoMedica;
+	}
+
+	public void setAvaliacaoMedica(String avaliacaoMedica) {
+		this.avaliacaoMedica = avaliacaoMedica;
+	}
+
+	public String getMedicacaoPrescrita() {
+		return medicacaoPrescrita;
+	}
+
+	public void setMedicacaoPrescrita(String medicacaoPrescrita) {
+		this.medicacaoPrescrita = medicacaoPrescrita;
 	}
 
 	
