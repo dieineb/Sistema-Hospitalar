@@ -45,13 +45,13 @@ public class PacienteDAO {
 		}
 	}
 
-	public void recuperarPacientesDoTxt() {
+	public static void recuperarPacientesDoTxt() {
 		try (BufferedReader br = new BufferedReader(new FileReader(path))) {
 			String line;
 			String[] values;
 			while ((line = br.readLine()) != null) {
 				values = line.split(",");
-		   		this.pacientesNoHospital.add(new Paciente(values[0],values[1],
+		   		pacientesNoHospital.add(new Paciente(values[0],values[1],
 		   				values[2],values[3], values[4],values[5],values[6]));
 			}
 		} catch (IOException e) {
