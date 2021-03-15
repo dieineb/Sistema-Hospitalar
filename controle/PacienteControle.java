@@ -15,15 +15,13 @@ public class PacienteControle implements ActionListener {
 	JanelaPrincipal janela;
 	TelaGerenciarPaciente telaPaciente;
 
-	ListaPaciente listaPaciente;
+	
 	PacienteDAO pacienteDAO;
 
 	
-	public PacienteControle(JanelaPrincipal janela, TelaGerenciarPaciente telaPaciente, ListaPaciente listaPacientes,
-			PacienteDAO pacienteDAO) {
+	public PacienteControle(JanelaPrincipal janela, TelaGerenciarPaciente telaPaciente) {
 		this.janela = janela;
 		this.telaPaciente = telaPaciente;
-		this.listaPaciente = listaPacientes;
 		this.pacienteDAO = pacienteDAO;
 		
 		this.telaPaciente.getButtonCadastrar().addActionListener(this);
@@ -41,8 +39,6 @@ public class PacienteControle implements ActionListener {
 			if (paciente == null) {
 				System.out.println("Preencha todos os campos!");
 			} else {
-				listaPaciente.adicionarPaciente(paciente); 
-
 				boolean retorno = pacienteDAO.cadastraPaciente(paciente); 
 
 				if (retorno) {

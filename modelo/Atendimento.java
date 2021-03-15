@@ -3,7 +3,7 @@ package modelo;
 public class Atendimento {
     
 	Paciente pessoa;
-	int horaChegada;
+	String horaChegada;
 	int minChegada;
 	int minSaida;
 	int horaSaida;

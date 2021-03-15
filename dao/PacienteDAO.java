@@ -19,19 +19,19 @@ public class PacienteDAO {
 	private final static String path = UtilDAO.pathParaDataMultiSO(txtASerMudado);
 	
 	
-	//se quiser adicionar um paciente utilizar este método, ele tanto adiciona no txt quando na lista presente
-	// no programa o outro metodo é apenas para uma melhor organizacao do codigo
-	public boolean cadastraPaciente(Paciente p) {
 	
-	this.pacientesNoHospital.add(p);
 	
-	return this.adicionarPacienteNoTxt(p.getNome(), p.getCpf(), p.getDataNasc(), 
+	public static boolean cadastraPaciente(Paciente p) {
+	
+	pacientesNoHospital.add(p);
+	
+	return adicionarPacienteNoTxt(p.getNome(), p.getCpf(), p.getDataNasc(), 
 			p.getEndereco(), p.getTipoSanguineo(), p.getNomePai(), p.getNomeMae());		
 	}
 	
 	
 	
-	public boolean adicionarPacienteNoTxt(String nmPaciente,String cpf ,String dtNascimento, String endereco, String tpSanguineo,
+	public static boolean adicionarPacienteNoTxt(String nmPaciente,String cpf ,String dtNascimento, String endereco, String tpSanguineo,
 			String nmPai, String nmMae) {
 
 		try (BufferedWriter bw = new BufferedWriter(new FileWriter(path, true))) {
