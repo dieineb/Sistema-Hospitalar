@@ -19,6 +19,15 @@ public class PacienteDAO {
 	private final static String path = UtilDAO.pathParaDataMultiSO(txtASerMudado);
 	
 	
+	public static Paciente acharPacientePorCpf(String cpf) {
+		for (Paciente p : pacientesNoHospital) {
+			if(p.getCpf().equals(cpf)){	
+				return p;
+			}
+		}
+		return null;
+	}
+	
 	
 	
 	public static boolean cadastraPaciente(Paciente p) {
