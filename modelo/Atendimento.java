@@ -3,7 +3,7 @@ package modelo;
 public class Atendimento {
     
 	private Paciente pessoa;
-	private String dhInternacao;
+	private String dhAtendimento;
 	private int prioridade;
 	private String queixa;
 	private String ala;
@@ -11,46 +11,48 @@ public class Atendimento {
 	
 	private String avaliacaoMedica;
 	private String medicacaoPrescrita;
-
+	private String dhTerminoAtendimento;
 
 	public Atendimento() {
 	}
 
-	public Atendimento(Paciente pessoa, String dhInternacao, int prioridade, String queixa,String obs) {
+	public Atendimento(Paciente pessoa, String dhAtendimento, int prioridade, String queixa,String obs) {
 		super();
 		this.pessoa = pessoa;
-		this.dhInternacao = dhInternacao;
+		this.dhAtendimento = dhAtendimento;
 		this.prioridade = prioridade;
 		this.queixa = queixa;
 		this.obs = obs;
 		this.setAvaliacaoMedica(null);
 		this.setMedicacaoPrescrita(null);
+		this.dhTerminoAtendimento = null;
 		this.ala = null;
 	}
 	
-	public Atendimento(Paciente pessoa, String dhInternacao, int prioridade, String queixa, String ala, String obs) {
+	public Atendimento(Paciente pessoa, String dhAtendimento, int prioridade, String queixa, String ala, String obs) {
 		super();
 		this.pessoa = pessoa;
-		this.dhInternacao = dhInternacao;
+		this.dhAtendimento = dhAtendimento;
 		this.prioridade = prioridade;
 		this.queixa = queixa;
 		this.ala = ala;
 		this.obs = obs;
-		this.setAvaliacaoMedica(null);
-		this.setMedicacaoPrescrita(null);
+		this.avaliacaoMedica = null;
+		this.medicacaoPrescrita = null;
 	}
 	
-	public Atendimento(Paciente pessoa, String dhInternacao, int prioridade, String queixa, String ala, String obs,
-			String avaliacaoMedica, String medicacaoPrescrita) {
+	public Atendimento(Paciente pessoa, String dhAtendimento, int prioridade, String queixa, String ala, String obs,
+			String avaliacaoMedica, String medicacaoPrescrita, String dhTerminoAtendimento) {
 		super();
 		this.pessoa = pessoa;
-		this.dhInternacao = dhInternacao;
+		this.dhAtendimento = dhAtendimento;
 		this.prioridade = prioridade;
 		this.queixa = queixa;
 		this.ala = ala;
 		this.obs = obs;
-		this.setAvaliacaoMedica(avaliacaoMedica);
-		this.setMedicacaoPrescrita(medicacaoPrescrita);
+		this.avaliacaoMedica =avaliacaoMedica;
+		this.medicacaoPrescrita = medicacaoPrescrita;
+		this.dhTerminoAtendimento = dhTerminoAtendimento;
 	}
 	
 	
@@ -63,12 +65,12 @@ public class Atendimento {
 		this.pessoa = pessoa;
 	}
 
-	public String getDhInternacao() {
-		return dhInternacao;
+	public String getDhAtendimento() {
+		return dhAtendimento;
 	}
 
-	public void setDhInternacao(String dhInternacao) {
-		this.dhInternacao = dhInternacao;
+	public void setDhInternacao(String dhAtendimento) {
+		this.dhAtendimento = dhAtendimento;
 	}
 
 	public int getPrioridade() {
@@ -117,6 +119,18 @@ public class Atendimento {
 
 	public void setMedicacaoPrescrita(String medicacaoPrescrita) {
 		this.medicacaoPrescrita = medicacaoPrescrita;
+	}
+
+	public String getDhTerminoAtendimento() {
+		return dhTerminoAtendimento;
+	}
+
+	public void setDhTerminoAtendimento(String dhTerminoAtendimento) {
+		this.dhTerminoAtendimento = dhTerminoAtendimento;
+	}
+
+	public void setDhAtendimento(String dhAtendimento) {
+		this.dhAtendimento = dhAtendimento;
 	}
 
 	
