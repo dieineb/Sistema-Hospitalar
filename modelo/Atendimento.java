@@ -2,52 +2,24 @@ package modelo;
 
 public class Atendimento {
     
-	Paciente pessoa;
-	String horaChegada;
-	int minChegada;
-	int minSaida;
-	int horaSaida;
-	int prioridade;
-	String queixa;
-	String data;
-	String ala;
-	String obs;
-
-	public String getData() {
-		return data;
-	}
-
-	public void setData(String data) {
-		this.data = data;
-	}
-
-	private int hAtend;
-	private int mAtend;
-
-	public int gethAtend() {
-		return hAtend;
-	}
-
-	public void sethAtend(int hAtend) {
-		this.hAtend = hAtend;
-	}
-
-	public int getmAtend() {
-		return mAtend;
-	}
-
-	public void setmAtend(int mAtend) {
-		this.mAtend = mAtend;
-	}
+	private Paciente pessoa;
+	private String dhInternacao;
+	private int prioridade;
+	private String queixa;
+	private String ala;
+	private String obs;
 
 	public Atendimento() {
 	}
 
-	public Atendimento(Paciente pessoa, String data, int horaChegada, int minChegada) {
+	public Atendimento(Paciente pessoa, String dhInternacao, int prioridade, String queixa, String ala, String obs) {
+		super();
 		this.pessoa = pessoa;
-		this.data = data;
-		this.horaChegada = horaChegada;
-		this.minChegada = minChegada;
+		this.dhInternacao = dhInternacao;
+		this.prioridade = prioridade;
+		this.queixa = queixa;
+		this.ala = ala;
+		this.obs = obs;
 	}
 
 	public Paciente getPessoa() {
@@ -58,36 +30,12 @@ public class Atendimento {
 		this.pessoa = pessoa;
 	}
 
-	public int getHoraChegada() {
-		return horaChegada;
+	public String getDhInternacao() {
+		return dhInternacao;
 	}
 
-	public void setHoraChegada(int horaChegada) {
-		this.horaChegada = horaChegada;
-	}
-
-	public int getMinChegada() {
-		return minChegada;
-	}
-
-	public void setMinChegada(int minChegada) {
-		this.minChegada = minChegada;
-	}
-
-	public int getMinSaida() {
-		return minSaida;
-	}
-
-	public void setMinSaida(int minSaida) {
-		this.minSaida = minSaida;
-	}
-
-	public int getHoraSaida() {
-		return horaSaida;
-	}
-
-	public void setHoraSaida(int horaSaida) {
-		this.horaSaida = horaSaida;
+	public void setDhInternacao(String dhInternacao) {
+		this.dhInternacao = dhInternacao;
 	}
 
 	public int getPrioridade() {
@@ -122,6 +70,7 @@ public class Atendimento {
 		this.obs = obs;
 	}
 
+	
 }
 
     

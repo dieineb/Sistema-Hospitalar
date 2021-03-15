@@ -2,12 +2,16 @@ package controle;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.JPanel;
-
 import dao.PacienteDAO;
 import modelo.ListaPaciente;
 import visao.JanelaPrincipal;
+import visao.TelaAguardando;
+import visao.TelaAtendimento;
+import visao.TelaConsulta;
+import visao.TelaEncaminharInternacao;
 import visao.TelaGerenciarPaciente;
+import visao.TelaLeitosVagos;
+import visao.TelaPacientesInternados;
 
 public class ControlePrincipal implements ActionListener {
 
@@ -31,7 +35,7 @@ public class ControlePrincipal implements ActionListener {
 
 	public ControlePrincipal(JanelaPrincipal janela) {
 		this.janela = janela;
-
+		PacienteDAO.recuperarPacientesDoTxt();
 		this.janela.getContentPane().add(telaPaciente, "painel2"); 
 		
 		//"puxei" os outros paineis aqui ao inves da janelaPrincipal
