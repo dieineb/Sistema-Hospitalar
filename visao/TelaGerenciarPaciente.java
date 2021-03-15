@@ -16,6 +16,9 @@ import javax.swing.SwingConstants;
 
 import modelo.Paciente;
 import net.miginfocom.swing.MigLayout;
+import java.awt.Color;
+import java.awt.SystemColor;
+import javax.swing.UIManager;
 
 public class TelaGerenciarPaciente extends JPanel {	//todas as telas (com exceção da JanelaPrincipal, que é JFrame)
 							//são JPanel, em razão do cardLayout
@@ -26,89 +29,59 @@ public class TelaGerenciarPaciente extends JPanel {	//todas as telas (com exceç
 	private JTextField fieldNascimento;
 	private JTextField fieldPai;
 	private JTextField fieldNome;
-	private JTextField fieldEndereco;
 	private JTextField fieldMae;
 	private JButton buttonLimpar;
 	private JButton buttonCadastrar;
 	private JComboBox<String> comboBoxTipoSanguineo;
+	private JTextField fieldEndereco;
+	private JPanel panel;
 
 	@SuppressWarnings("unchecked")
 	public TelaGerenciarPaciente() {
-		setLayout(new MigLayout("", "[][][]", "[][][][][][][][]"));	//utilização do MigLayout
+		setLayout(new MigLayout("", "[67.00][268.00]", "[60.00][][][][][][][][]"));	//utilização do MigLayout
+		
+		panel = new JPanel();
+		panel.setBackground(UIManager.getColor("Label.disabledShadow"));
+		add(panel, "flowy,cell 1 0,alignx center");
 		
 		//adicionando os componentes
 		//(labels, fieldAreas, buttons, combobox)
 		JLabel labelTituloGerenciar = new JLabel("GERENCIAR PACIENTE");
+		labelTituloGerenciar.setHorizontalAlignment(SwingConstants.CENTER);
+		panel.add(labelTituloGerenciar);
 		labelTituloGerenciar.setFont(new Font("Arial Unicode MS", Font.BOLD, 20));
-		add(labelTituloGerenciar, "cell 0 0");
 		
 		JLabel labelCPF = new JLabel("CPF:");
-		add(labelCPF, "flowx,cell 0 2");
+		add(labelCPF, "flowx,cell 1 1");
 		
 		JLabel labelNome = new JLabel("Nome:");
-		add(labelNome, "flowx,cell 2 2");
-		
-		JLabel labelData = new JLabel("Data de Nascimento:");
-		add(labelData, "flowx,cell 0 3");
-		
-		JLabel labelEndereco = new JLabel("Endere\u00E7o:");
-		add(labelEndereco, "flowx,cell 2 3");
-		
-		JLabel labelPai = new JLabel("Nome do Pai:");
-		add(labelPai, "flowx,cell 0 4");
+		add(labelNome, "flowx,cell 1 2");
 		
 		fieldCPF = new JTextField();
-		add(fieldCPF, "cell 0 2");
+		add(fieldCPF, "cell 1 1,growx");
 		fieldCPF.setColumns(15);
 		
-		fieldNascimento = new JTextField();
-		add(fieldNascimento, "cell 0 3");
-		fieldNascimento.setColumns(10);
+		JLabel labelEndereco = new JLabel("Endere\u00E7o:");
+		add(labelEndereco, "flowx,cell 1 3");
 		
-		fieldPai = new JTextField();
-		fieldPai.setText("");
-		add(fieldPai, "cell 0 4");
-		fieldPai.setColumns(20);
+		JLabel labelData = new JLabel("Data de Nascimento:");
+		add(labelData, "flowx,cell 1 4");
+		
+		JLabel labelPai = new JLabel("Nome do Pai:");
+		add(labelPai, "flowx,cell 1 5");
 		
 		JLabel labelMae = new JLabel("Nome da Mãe:");
-		add(labelMae, "flowx,cell 2 4");
-		
-		fieldNome = new JTextField();
-		add(fieldNome, "cell 2 2");
-		fieldNome.setColumns(20);
-		
-		fieldEndereco = new JTextField();
-		add(fieldEndereco, "cell 2 3");
-		fieldEndereco.setColumns(30);
-		
-		fieldMae = new JTextField();
-		add(fieldMae, "cell 2 4");
-		fieldMae.setColumns(20);
+		add(labelMae, "flowx,cell 1 6");
 		
 		JLabel labelTipo = new JLabel("Tipo Sanguíneo");
-		add(labelTipo, "flowx,cell 0 5");
-		
-		//instanciamento do combobox		
-		comboBoxTipoSanguineo = new JComboBox<>();
-		comboBoxTipoSanguineo.setFont(new Font("Verdana", Font.PLAIN, 12));
-		add(comboBoxTipoSanguineo, "cell 0 5,growx");
-		
-		// Adicionando os tipos sanguineos no comboBox
-		comboBoxTipoSanguineo.addItem("A+");
-		comboBoxTipoSanguineo.addItem("A-");
-		comboBoxTipoSanguineo.addItem("B+");
-		comboBoxTipoSanguineo.addItem("B-");
-		comboBoxTipoSanguineo.addItem("O+");
-		comboBoxTipoSanguineo.addItem("O-");
-		comboBoxTipoSanguineo.addItem("AB+");
-		comboBoxTipoSanguineo.addItem("AB-");
+		add(labelTipo, "flowx,cell 1 7");
 		
 		//criação do botão "Limpar Tela"		
 		buttonLimpar = new JButton("LIMPAR TELA");
 		buttonLimpar.setAlignmentY(Component.BOTTOM_ALIGNMENT);
 		buttonLimpar.setAlignmentX(Component.RIGHT_ALIGNMENT);
 		buttonLimpar.setSize(new Dimension(15, 0));
-		add(buttonLimpar, "flowx,cell 0 7");
+		add(buttonLimpar, "flowx,cell 1 8");
 		//acao para o metodo limpar 
 		buttonLimpar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) { 
@@ -120,7 +93,43 @@ public class TelaGerenciarPaciente extends JPanel {	//todas as telas (com exceç
 		buttonCadastrar = new JButton("CADASTRAR PACIENTE");
 		buttonCadastrar.setHorizontalAlignment(SwingConstants.RIGHT);
 		buttonCadastrar.setSize(new Dimension(11, 0));
-		add(buttonCadastrar, "cell 0 7");
+		add(buttonCadastrar, "cell 1 8");
+		
+		//instanciamento do combobox		
+		comboBoxTipoSanguineo = new JComboBox<>();
+		comboBoxTipoSanguineo.setFont(new Font("Verdana", Font.PLAIN, 12));
+		add(comboBoxTipoSanguineo, "cell 1 7,growx");
+		
+		fieldMae = new JTextField();
+		add(fieldMae, "cell 1 6");
+		fieldMae.setColumns(20);
+		
+		fieldPai = new JTextField();
+		fieldPai.setText("");
+		add(fieldPai, "cell 1 5");
+		fieldPai.setColumns(20);
+		
+		fieldNascimento = new JTextField();
+		add(fieldNascimento, "cell 1 4,grow");
+		fieldNascimento.setColumns(10);
+		
+		fieldNome = new JTextField();
+		add(fieldNome, "cell 1 2,growx");
+		fieldNome.setColumns(20);
+		
+		fieldEndereco = new JTextField();
+		fieldEndereco.setColumns(20);
+		add(fieldEndereco, "cell 1 3,growx");
+		
+		// Adicionando os tipos sanguineos no comboBox
+		comboBoxTipoSanguineo.addItem("A+");
+		comboBoxTipoSanguineo.addItem("A-");
+		comboBoxTipoSanguineo.addItem("B+");
+		comboBoxTipoSanguineo.addItem("B-");
+		comboBoxTipoSanguineo.addItem("O+");
+		comboBoxTipoSanguineo.addItem("O-");
+		comboBoxTipoSanguineo.addItem("AB+");
+		comboBoxTipoSanguineo.addItem("AB-");
 		//diferentemente do botao limpar, a acao 
 		//do botao cadastrar é feita no pacote controle
 		}

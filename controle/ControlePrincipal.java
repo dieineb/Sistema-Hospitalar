@@ -3,7 +3,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import dao.PacienteDAO;
-import modelo.ListaPaciente;
 import visao.JanelaPrincipal;
 import visao.TelaAguardando;
 import visao.TelaAtendimento;
@@ -28,8 +27,6 @@ public class ControlePrincipal implements ActionListener {
 	TelaLeitosVagos telaLeitos = new TelaLeitosVagos();
 
 	PacienteControle pacienteControle;
-
-	ListaPaciente listaPacientes = new ListaPaciente();
 
 	PacienteDAO pacienteDAO = new PacienteDAO();
 
@@ -56,7 +53,7 @@ public class ControlePrincipal implements ActionListener {
 		if (e.getActionCommand().equals("gerenciar-paciente")) {
 
 			
-			pacienteControle = new PacienteControle(janela, telaPaciente, listaPacientes, pacienteDAO);
+			pacienteControle = new PacienteControle(janela, telaPaciente);
 
 		}
 	}

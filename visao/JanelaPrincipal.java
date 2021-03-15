@@ -103,7 +103,10 @@ public class JanelaPrincipal extends JFrame {
 		}
 			
 		);*/
+		
+		JMenuItem itemGerarConsulta = new JMenuItem("Gerar Consulta");
 		menuConsulta.add(itemGerarConsulta);
+		
 		
 		JMenuItem itemEncaminhar = new JMenuItem("Encaminhar para interna\u00E7\u00E3o");
 		/*itemEncaminhar.addActionListener(new ActionListener() {

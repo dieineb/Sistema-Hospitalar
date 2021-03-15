@@ -5,7 +5,6 @@ import java.awt.event.ActionListener;
 
 import dao.PacienteDAO;
 import modelo.Atendimento;
-import modelo.ListaPaciente;
 import modelo.Paciente;
 import visao.JanelaPrincipal;
 import visao.TelaGerenciarPaciente;
@@ -14,8 +13,6 @@ public class PacienteControle implements ActionListener {
 
 	JanelaPrincipal janela;
 	TelaGerenciarPaciente telaPaciente;
-
-	
 	PacienteDAO pacienteDAO;
 
 	
