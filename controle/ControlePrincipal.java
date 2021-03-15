@@ -14,6 +14,14 @@ public class ControlePrincipal implements ActionListener {
 	JanelaPrincipal janela;
 
 	TelaGerenciarPaciente telaPaciente = new TelaGerenciarPaciente();
+	
+	//instanciei as outras telas
+	/*TelaAtendimento telaAtendimento = new TelaAtendimento();
+	TelaConsulta telaConsulta = new TelaConsulta();
+	TelaEncaminharInternacao telaEncaminhar = new TelaEncaminharInternacao();
+	TelaAguardando telaAguardar = new TelaAguardando();
+	TelaPacientesInternados telaInternados = new TelaPacientesInternados();
+	TelaLeitosVagos telaLeitos = new TelaLeitosVagos();*/
 
 	PacienteControle pacienteControle;
 
@@ -25,6 +33,15 @@ public class ControlePrincipal implements ActionListener {
 		this.janela = janela;
 
 		this.janela.getContentPane().add(telaPaciente, "painel2"); 
+		
+		//"puxei" os outros paineis aqui ao inves da janelaPrincipal
+		/*this.janela.getContentPane().add(telaAtendimento, "painel3");
+		this.janela.getContentPane().add(telaConsulta, "painel4");
+		this.janela.getContentPane().add(telaEncaminhar, "painel5");
+		this.janela.getContentPane().add(telaAguardar, "painel6");			
+		this.janela.getContentPane().add(telaInternados, "painel7");
+		this.janela.getContentPane().add(telaLeitos, "painel8");*/
+		//this.janela.getItemGerenciarPaciente().addActionListener(this)
 
 		this.janela.getItemGerenciarPaciente().addActionListener(this);
 	}
