@@ -58,33 +58,36 @@ public class JanelaPrincipal extends JFrame {
 		
 		JMenuItem itemGerenciarPaciente = new JMenuItem("Gerenciar paciente");
 		
-	/*	itemGerenciarPaciente.addActionListener(new ActionListener() {
+		itemGerenciarPaciente.addActionListener(new ActionListener() {
 
 			@Override
 		public void actionPerformed(ActionEvent e) {
 				
-				card.show(contentPane, "painel1");				
+			card.show(contentPane, "painel1");				
 			}
 			
 		}
-		);*/
+		);
 		menuPaciente.add(itemGerenciarPaciente);
+		itemGerenciarPaciente.setActionCommand("gerenciar-paciente");
+		itemGerenciarPaciente.setActionCommand("cadastrar-paciente");
+
 		
 		//declaração itens menu ATENDIMENTO
-		JMenu menuAtendimentoEmergencia = new JMenu("Atendimento Emerg\u00EAncia");
+		JMenu menuAtendimentoEmergencia = new JMenu("Atendimento Emergencia");
 		menuBar.add(menuAtendimentoEmergencia);
 		
 		JMenuItem itemGerarAtendimento = new JMenuItem("Gerar atendimento");
-		/*itemGerarAtendimento.addActionListener(new ActionListener() {
+		itemGerarAtendimento.addActionListener(new ActionListener() {
 
 			@Override
 		public void actionPerformed(ActionEvent e) {
 				
-				card.show(contentPane, "painel2");				
+			card.show(contentPane, "painel2");				
 			}
 		}
 			
-		);*/
+		);
 	
 		menuAtendimentoEmergencia.add(itemGerarAtendimento);
 		
@@ -92,24 +95,24 @@ public class JanelaPrincipal extends JFrame {
 		JMenu menuConsulta = new JMenu("Consulta");
 		menuBar.add(menuConsulta);
 		
-		/*JMenuItem itemGerarConsulta = new JMenuItem("Gerar consulta");
+		JMenuItem itemGerarConsulta = new JMenuItem("Gerar consulta");
 		itemGerarConsulta.addActionListener(new ActionListener() {
 
 			@Override
 		public void actionPerformed(ActionEvent e) {
 				
-				card.show(contentPane, "painel3");				
+			card.show(contentPane, "painel3");				
 			}
 		}
 			
-		);*/
+		);
 		
 		JMenuItem itemGerarConsulta = new JMenuItem("Gerar Consulta");
 		menuConsulta.add(itemGerarConsulta);
 		
 		
 		JMenuItem itemEncaminhar = new JMenuItem("Encaminhar para interna\u00E7\u00E3o");
-		/*itemEncaminhar.addActionListener(new ActionListener() {
+		itemEncaminhar.addActionListener(new ActionListener() {
 
 			@Override
 		public void actionPerformed(ActionEvent e) {
@@ -118,11 +121,11 @@ public class JanelaPrincipal extends JFrame {
 			}
 		}
 			
-		);*/
+		);
 		menuConsulta.add(itemEncaminhar);
 		
 		JMenuItem itemFinalizarAtendimento = new JMenuItem("Finalizar Atendimento");
-		/*itemFinalizarAtendimento.addActionListener(new ActionListener() {
+		itemFinalizarAtendimento.addActionListener(new ActionListener() {
 
 			@Override
 		public void actionPerformed(ActionEvent e) {
@@ -131,29 +134,29 @@ public class JanelaPrincipal extends JFrame {
 			}
 		}
 			
-		);*/
+		);
 		menuConsulta.add(itemFinalizarAtendimento);
 		
 		
 		//declaração itens MENU RELATÓRIOS
-		JMenu menuRelatorios = new JMenu("Relat\u00F3rios");
+		JMenu menuRelatorios = new JMenu("Relatorios");
 		menuBar.add(menuRelatorios);
 		
 		JMenuItem itemListarPacientesAguardando = new JMenuItem("Listar pacientes aguardando leito (por ala)");
-		/*itemListarPacientesAguardando.addActionListener(new ActionListener() {
+		itemListarPacientesAguardando.addActionListener(new ActionListener() {
 
 			@Override
 		public void actionPerformed(ActionEvent e) {
 				
-				card.show(contentPane, "painel6");				
+			card.show(contentPane, "painel6");				
 			}
 		}
 			
-		);*/
+		);
 		menuRelatorios.add(itemListarPacientesAguardando);
 		
 		JMenuItem itemListarInternados = new JMenuItem("Listar pacientes internados (por ala)");
-		/*itemListarInternados.addActionListener(new ActionListener() {
+		itemListarInternados.addActionListener(new ActionListener() {
 
 			@Override
 		public void actionPerformed(ActionEvent e) {
@@ -162,20 +165,20 @@ public class JanelaPrincipal extends JFrame {
 			}
 		}
 			
-		);*/
+		);
 		menuRelatorios.add(itemListarInternados);
 		
-		JMenuItem itemListarLeitosVagos = new JMenuItem("Listar n\u00FAmero de leitos vagos (por ala)");
-		/*itemListarLeitosVagos.addActionListener(new ActionListener() {
+		JMenuItem itemListarLeitosVagos = new JMenuItem("Listar quantidade de leitos vagos (por ala)");
+		itemListarLeitosVagos.addActionListener(new ActionListener() {
 
 			@Override
 		public void actionPerformed(ActionEvent e) {
 				
-				card.show(contentPane, "painel8");				
+			card.show(contentPane, "painel8");				
 			}
 		}
 			
-		);*/
+		);
 		menuRelatorios.add(itemListarLeitosVagos);
 		
 		//instancia JPanel
@@ -188,14 +191,14 @@ public class JanelaPrincipal extends JFrame {
 		
 		//INSTANCIA TELAS
 		telaLogo = new TelaInicialLogo();
-		/*telaGerenciar = new TelaGerenciarPaciente();
+		telaGerenciar = new TelaGerenciarPaciente();
 		telaAtendimento = new TelaAtendimento();
 		telaConsulta = new TelaConsulta();
 		telaEncaminharInternacao = new TelaEncaminharInternacao();
 		telaFinalizarAtendimento = new TelaFinalizarAtendimento();
 		telaAguardar = new TelaAguardando();
 		telaInternados = new TelaPacientesInternados();
-		telaLeitos = new TelaLeitosVagos();*/
+		telaLeitos = new TelaLeitosVagos();
 		
 		contentPane.add(telaLogo, "painel0");
 		JPanel panel = new JPanel();
@@ -204,14 +207,14 @@ public class JanelaPrincipal extends JFrame {
 		JLabel lblImagem = new JLabel("");
 		lblImagem.setIcon(new ImageIcon(JanelaPrincipal.class.getResource("/imagens/medical-logo.png")));
 		panel.add(lblImagem);
-		/*contentPane.add(telaGerenciar, "painel1");
+		contentPane.add(telaGerenciar, "painel1");
 		contentPane.add(telaAtendimento,"painel2");
 		contentPane.add(telaConsulta,"painel3");
 		contentPane.add(telaEncaminharInternacao,"painel4");
 		contentPane.add(telaFinalizarAtendimento,"painel5");
 		contentPane.add(telaAguardar,"painel6");
 		contentPane.add(telaInternados,"painel7");
-		contentPane.add(telaLeitos,"painel8");*/
+		contentPane.add(telaLeitos,"painel8");
 		
 	
 	}
@@ -290,6 +293,64 @@ public class JanelaPrincipal extends JFrame {
 	}
 	public void setTelaLeitos(TelaLeitosVagos telaLeitos) {
 		this.telaLeitos = telaLeitos;
+	}
+		public JMenuItem getItemGerarConsulta() {
+		return itemGerarConsulta;
+	}
+
+
+	public void setItemGerarConsulta(JMenuItem itemGerarConsulta) {
+		this.itemGerarConsulta = itemGerarConsulta;
+	}
+
+
+	public JMenuItem getItemEncaminhar() {
+		return itemEncaminhar;
+	}
+
+
+	public void setItemEncaminhar(JMenuItem itemEncaminhar) {
+		this.itemEncaminhar = itemEncaminhar;
+	}
+
+
+	public JMenuItem getItemFinalizarAtendimento() {
+		return itemFinalizarAtendimento;
+	}
+
+
+	public void setItemFinalizarAtendimento(JMenuItem itemFinalizarAtendimento) {
+		this.itemFinalizarAtendimento = itemFinalizarAtendimento;
+	}
+
+
+	public JMenuItem getItemListarPacientesAguardando() {
+		return itemListarPacientesAguardando;
+	}
+
+
+	public void setItemListarPacientesAguardando(JMenuItem itemListarPacientesAguardando) {
+		this.itemListarPacientesAguardando = itemListarPacientesAguardando;
+	}
+
+
+	public JMenuItem getItemListarInternados() {
+		return itemListarInternados;
+	}
+
+
+	public void setItemListarInternados(JMenuItem itemListarInternados) {
+		this.itemListarInternados = itemListarInternados;
+	}
+
+
+	public JMenuItem getItemListarLeitosVagos() {
+		return itemListarLeitosVagos;
+	}
+
+
+	public void setItemListarLeitosVagos(JMenuItem itemListarLeitosVagos) {
+		this.itemListarLeitosVagos = itemListarLeitosVagos;
 	}
 
 
