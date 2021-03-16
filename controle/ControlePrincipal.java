@@ -8,6 +8,7 @@ import visao.TelaAguardando;
 import visao.TelaAtendimento;
 import visao.TelaConsulta;
 import visao.TelaEncaminharInternacao;
+import visao.TelaFinalizarAtendimento;
 import visao.TelaGerenciarPaciente;
 import visao.TelaLeitosVagos;
 import visao.TelaPacientesInternados;
@@ -22,11 +23,11 @@ public class ControlePrincipal implements ActionListener {
 	TelaAtendimento telaAtendimento = new TelaAtendimento();
 	TelaConsulta telaConsulta = new TelaConsulta();
 	TelaEncaminharInternacao telaEncaminhar = new TelaEncaminharInternacao();
+	TelaFinalizarAtendimento telaFinalizar = new TelaFinalizarAtendimento();
 	TelaAguardando telaAguardar = new TelaAguardando();
 	TelaPacientesInternados telaInternados = new TelaPacientesInternados();
 	TelaLeitosVagos telaLeitos = new TelaLeitosVagos();
-
-	PacienteControle pacienteControle;
+	
 
 	PacienteDAO pacienteDAO = new PacienteDAO();
 
@@ -37,7 +38,8 @@ public class ControlePrincipal implements ActionListener {
 		
 
 
-		this.janela.getItemGerenciarPaciente().addActionListener(this);
+
+		
 	}
 
 	@Override
