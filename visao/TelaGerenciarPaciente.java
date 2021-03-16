@@ -20,10 +20,10 @@ import java.awt.Color;
 import java.awt.SystemColor;
 import javax.swing.UIManager;
 
-public class TelaGerenciarPaciente extends JPanel {	//todas as telas (com exceção da JanelaPrincipal, que é JFrame)
-							//são JPanel, em razão do cardLayout
+public class TelaGerenciarPaciente extends JPanel {	//todas as telas (com exceÃ§Ã£o da JanelaPrincipal, que Ã© JFrame)
+							//sÃ£o JPanel, em razÃ£o do cardLayout
 	
-	//declaração de variáveis/contents
+	//declaraÃ§Ã£o de variÃ¡veis/contents
 	private static final long serialVersionUID = 1L;
 	private JTextField fieldCPF;
 	private JTextField fieldNascimento;
@@ -38,7 +38,7 @@ public class TelaGerenciarPaciente extends JPanel {	//todas as telas (com exceç
 
 	@SuppressWarnings("unchecked")
 	public TelaGerenciarPaciente() {
-		setLayout(new MigLayout("", "[67.00][268.00]", "[60.00][][][][][][][][]"));	//utilização do MigLayout
+		setLayout(new MigLayout("", "[67.00][268.00]", "[60.00][][][][][][][][]"));	//utilizaÃ§Ã£o do MigLayout
 		
 		panel = new JPanel();
 		panel.setBackground(UIManager.getColor("Label.disabledShadow"));
@@ -61,7 +61,7 @@ public class TelaGerenciarPaciente extends JPanel {	//todas as telas (com exceç
 		add(fieldCPF, "cell 1 1,growx");
 		fieldCPF.setColumns(15);
 		
-		JLabel labelEndereco = new JLabel("Endere\u00E7o:");
+		JLabel labelEndereco = new JLabel("Endereco:");
 		add(labelEndereco, "flowx,cell 1 3");
 		
 		JLabel labelData = new JLabel("Data de Nascimento:");
@@ -70,13 +70,13 @@ public class TelaGerenciarPaciente extends JPanel {	//todas as telas (com exceç
 		JLabel labelPai = new JLabel("Nome do Pai:");
 		add(labelPai, "flowx,cell 1 5");
 		
-		JLabel labelMae = new JLabel("Nome da Mãe:");
+		JLabel labelMae = new JLabel("Nome da Mae:");
 		add(labelMae, "flowx,cell 1 6");
 		
-		JLabel labelTipo = new JLabel("Tipo Sanguíneo");
+		JLabel labelTipo = new JLabel("Tipo Sanguineo");
 		add(labelTipo, "flowx,cell 1 7");
 		
-		//criação do botão "Limpar Tela"		
+		//criaÃ§Ã£o do botÃ£o "Limpar Tela"		
 		buttonLimpar = new JButton("LIMPAR TELA");
 		buttonLimpar.setAlignmentY(Component.BOTTOM_ALIGNMENT);
 		buttonLimpar.setAlignmentX(Component.RIGHT_ALIGNMENT);
@@ -123,6 +123,7 @@ public class TelaGerenciarPaciente extends JPanel {	//todas as telas (com exceç
 		add(fieldEndereco, "cell 1 3,growx");
 		
 		// Adicionando os tipos sanguineos no comboBox
+		comboBoxTipoSanguineo.addItem("");
 		comboBoxTipoSanguineo.addItem("A+");
 		comboBoxTipoSanguineo.addItem("A-");
 		comboBoxTipoSanguineo.addItem("B+");
@@ -132,7 +133,7 @@ public class TelaGerenciarPaciente extends JPanel {	//todas as telas (com exceç
 		comboBoxTipoSanguineo.addItem("AB+");
 		comboBoxTipoSanguineo.addItem("AB-");
 		//diferentemente do botao limpar, a acao 
-		//do botao cadastrar é feita no pacote controle
+		//do botao cadastrar Ã© feita no pacote controle
 		}
 
 		//CRIACAO METODO PARA A ACAO LIMPAR TELA
@@ -143,7 +144,7 @@ public class TelaGerenciarPaciente extends JPanel {	//todas as telas (com exceç
 			fieldPai.setText("");
 			fieldMae.setText("");
 			fieldNascimento.setText("");
-			//comboBox.setSelectedIndex(0);
+			comboBoxTipoSanguineo.setSelectedItem("");
 		}
 		
 		//CRIANDO O METODO PARA CADASTRAR PACIENTE
