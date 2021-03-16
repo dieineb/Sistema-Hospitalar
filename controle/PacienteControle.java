@@ -11,15 +11,12 @@ import visao.TelaGerenciarPaciente;
 
 public class PacienteControle implements ActionListener {
 
-	JanelaPrincipal janela;
 	TelaGerenciarPaciente telaPaciente;
-	PacienteDAO pacienteDAO;
 
-	
-	public PacienteControle(JanelaPrincipal janela, TelaGerenciarPaciente telaPaciente) {
-		this.janela = janela;
+	public PacienteControle(TelaGerenciarPaciente telaPaciente) {
+		
 		this.telaPaciente = telaPaciente;
-		this.pacienteDAO = pacienteDAO;
+
 		
 		this.telaPaciente.getButtonCadastrar().addActionListener(this);
 		this.telaPaciente.getButtonLimpar().addActionListener(this);
@@ -36,7 +33,7 @@ public class PacienteControle implements ActionListener {
 			if (paciente == null) {
 				System.out.println("Preencha todos os campos!");
 			} else {
-				boolean retorno = pacienteDAO.cadastraPaciente(paciente); 
+				boolean retorno = PacienteDAO.cadastraPaciente(paciente); 
 
 				if (retorno) {
 					System.out.println("Paciente cadastrado com sucesso!");

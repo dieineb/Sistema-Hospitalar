@@ -9,6 +9,7 @@ public class App {
 
 		JanelaPrincipal janela = new JanelaPrincipal();
 		ControlePrincipal controlePrincipal = new ControlePrincipal(janela);
+		PacienteControle controlePaciente = new PacienteControle(janela.getTelaGerenciar());
 		janela.setVisible(true);
 
 	}

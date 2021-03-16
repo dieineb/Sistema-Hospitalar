@@ -93,6 +93,7 @@ public class TelaGerenciarPaciente extends JPanel {	//todas as telas (com exceç
 		buttonCadastrar = new JButton("CADASTRAR PACIENTE");
 		buttonCadastrar.setHorizontalAlignment(SwingConstants.RIGHT);
 		buttonCadastrar.setSize(new Dimension(11, 0));
+		buttonCadastrar.setActionCommand("cadastrar-paciente");
 		add(buttonCadastrar, "cell 1 8");
 		
 		//instanciamento do combobox		
