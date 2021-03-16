@@ -50,12 +50,6 @@ public class ControlePrincipal implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		if (e.getActionCommand().equals("gerenciar-paciente")) {
-
-			
-			pacienteControle = new PacienteControle(janela, telaPaciente);
-
-		}
+		
 	}
-
 }
