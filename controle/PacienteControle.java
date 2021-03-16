@@ -30,7 +30,7 @@ public class PacienteControle implements ActionListener {
 		// TODO Auto-generated method stub
 
 		if (e.getActionCommand().equals("cadastrar-paciente")) {
-
+			System.out.println("CADASTRO");
 			Paciente paciente = obterCamposPaciente();
 
 			if (paciente == null) {

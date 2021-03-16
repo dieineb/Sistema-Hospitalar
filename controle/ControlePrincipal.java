@@ -17,24 +17,10 @@ public class ControlePrincipal implements ActionListener {
 
 	JanelaPrincipal janela;
 
-	TelaGerenciarPaciente telaPaciente = new TelaGerenciarPaciente();
 	
-	//instanciei as outras telas
-	TelaAtendimento telaAtendimento = new TelaAtendimento();
-	TelaConsulta telaConsulta = new TelaConsulta();
-	TelaEncaminharInternacao telaEncaminhar = new TelaEncaminharInternacao();
-	TelaFinalizarAtendimento telaFinalizar = new TelaFinalizarAtendimento();
-	TelaAguardando telaAguardar = new TelaAguardando();
-	TelaPacientesInternados telaInternados = new TelaPacientesInternados();
-	TelaLeitosVagos telaLeitos = new TelaLeitosVagos();
-	
-
-	PacienteDAO pacienteDAO = new PacienteDAO();
-
 	public ControlePrincipal(JanelaPrincipal janela) {
 		this.janela = janela;
-		PacienteDAO.recuperarPacientesDoTxt();
-		
+		PacienteDAO.recuperarPacientesDoTxt();	
 		
 
 
