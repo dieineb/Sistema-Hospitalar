@@ -40,6 +40,7 @@ public class JanelaPrincipal extends JFrame {
 	private JMenuItem itemListarPacientesAguardando;
 	private JMenuItem itemListarInternados;
 	private JMenuItem itemListarLeitosVagos;
+	private JMenuItem itemGerarConsulta;
 
 	// frame principal
 	public JanelaPrincipal() {
@@ -72,16 +73,18 @@ public class JanelaPrincipal extends JFrame {
 		JMenu menuAtendimentoEmergencia = new JMenu("Atendimento Emerg\u00EAncia");
 		menuBar.add(menuAtendimentoEmergencia);
 
-		JMenuItem itemGerarAtendimento = new JMenuItem("Gerar atendimento");
-		/*
-		 * itemGerarAtendimento.addActionListener(new ActionListener() {
-		 * 
-		 * @Override public void actionPerformed(ActionEvent e) {
-		 * 
-		 * card.show(contentPane, "painel2"); } }
-		 * 
-		 * );
-		 */
+		itemGerarAtendimento = new JMenuItem("Gerar atendimento");
+
+		itemGerarAtendimento.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+
+				card.show(contentPane, "painel2");
+			}
+		}
+
+		);
 
 		menuAtendimentoEmergencia.add(itemGerarAtendimento);
 
@@ -89,82 +92,98 @@ public class JanelaPrincipal extends JFrame {
 		JMenu menuConsulta = new JMenu("Consulta");
 		menuBar.add(menuConsulta);
 
-		/*
-		 * JMenuItem itemGerarConsulta = new JMenuItem("Gerar consulta");
-		 * itemGerarConsulta.addActionListener(new ActionListener() {
-		 * 
-		 * @Override public void actionPerformed(ActionEvent e) {
-		 * 
-		 * card.show(contentPane, "painel3"); } }
-		 * 
-		 * );
-		 */
+		itemGerarConsulta = new JMenuItem("Gerar consulta");
 
-		JMenuItem itemGerarConsulta = new JMenuItem("Gerar Consulta");
+		itemGerarConsulta.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+
+				card.show(contentPane, "painel3");
+			}
+		}
+
+		);
+
 		menuConsulta.add(itemGerarConsulta);
 
-		JMenuItem itemEncaminhar = new JMenuItem("Encaminhar para interna\u00E7\u00E3o");
-		/*
-		 * itemEncaminhar.addActionListener(new ActionListener() {
-		 * 
-		 * @Override public void actionPerformed(ActionEvent e) {
-		 * 
-		 * card.show(contentPane, "painel4"); } }
-		 * 
-		 * );
-		 */
+		itemEncaminhar = new JMenuItem("Encaminhar para interna\u00E7\u00E3o");
+
+		itemEncaminhar.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+
+				card.show(contentPane, "painel4");
+			}
+		}
+
+		);
+
 		menuConsulta.add(itemEncaminhar);
 
-		JMenuItem itemFinalizarAtendimento = new JMenuItem("Finalizar Atendimento");
-		/*
-		 * itemFinalizarAtendimento.addActionListener(new ActionListener() {
-		 * 
-		 * @Override public void actionPerformed(ActionEvent e) {
-		 * 
-		 * card.show(contentPane, "painel5"); } }
-		 * 
-		 * );
-		 */
+		itemFinalizarAtendimento = new JMenuItem("Finalizar Atendimento");
+
+		itemFinalizarAtendimento.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+
+				card.show(contentPane, "painel5");
+			}
+		}
+
+		);
+
 		menuConsulta.add(itemFinalizarAtendimento);
 
 		// declaração itens MENU RELATÓRIOS
 		JMenu menuRelatorios = new JMenu("Relat\u00F3rios");
 		menuBar.add(menuRelatorios);
 
-		JMenuItem itemListarPacientesAguardando = new JMenuItem("Listar pacientes aguardando leito (por ala)");
-		/*
-		 * itemListarPacientesAguardando.addActionListener(new ActionListener() {
-		 * 
-		 * @Override public void actionPerformed(ActionEvent e) {
-		 * 
-		 * card.show(contentPane, "painel6"); } }
-		 * 
-		 * );
-		 */
+		itemListarPacientesAguardando = new JMenuItem("Listar pacientes aguardando leito (por ala)");
+
+		itemListarPacientesAguardando.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+
+				card.show(contentPane, "painel6");
+			}
+		}
+
+		);
+
 		menuRelatorios.add(itemListarPacientesAguardando);
 
-		JMenuItem itemListarInternados = new JMenuItem("Listar pacientes internados (por ala)");
-		/*
-		 * itemListarInternados.addActionListener(new ActionListener() {
-		 * 
-		 * @Override public void actionPerformed(ActionEvent e) {
-		 * 
-		 * card.show(contentPane, "painel7"); } }
-		 * 
-		 * );
-		 */
+		itemListarInternados = new JMenuItem("Listar pacientes internados (por ala)");
+
+		itemListarInternados.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+
+				card.show(contentPane, "painel7");
+			}
+		}
+
+		);
+
 		menuRelatorios.add(itemListarInternados);
 
 		JMenuItem itemListarLeitosVagos = new JMenuItem("Listar n\u00FAmero de leitos vagos (por ala)");
-		/*
-		 * itemListarLeitosVagos.addActionListener(new ActionListener() {
-		 * 
-		 * @Override public void actionPerformed(ActionEvent e) {
-		 * 
-		 * card.show(contentPane, "painel8"); } }
-		 * 
-		 * );
-		 */
+
+		itemListarLeitosVagos.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+
+				card.show(contentPane, "painel8");
+			}
+		}
+
+		);
+
 		menuRelatorios.add(itemListarLeitosVagos);
 
 		// instancia JPanel
@@ -178,33 +197,30 @@ public class JanelaPrincipal extends JFrame {
 		// INSTANCIA TELAS
 		telaLogo = new TelaInicialLogo();
 		telaGerenciar = new TelaGerenciarPaciente();
-		/*
-		 *  telaAtendimento = new
-		 * TelaAtendimento(); telaConsulta = new TelaConsulta();
-		 * telaEncaminharInternacao = new TelaEncaminharInternacao();
-		 * telaFinalizarAtendimento = new TelaFinalizarAtendimento(); telaAguardar = new
-		 * TelaAguardando(); telaInternados = new TelaPacientesInternados(); telaLeitos
-		 * = new TelaLeitosVagos();
-		 */
+		telaAtendimento = new TelaAtendimento();
+		telaConsulta = new TelaConsulta();
+		telaEncaminharInternacao = new TelaEncaminharInternacao();
+		telaFinalizarAtendimento = new TelaFinalizarAtendimento(); 
+		telaAguardar = new  TelaAguardando(); 
+		telaInternados = new TelaPacientesInternados();
+		telaLeitos = new TelaLeitosVagos();
 
 		contentPane.add(telaLogo, "painel0");
 		contentPane.add(telaGerenciar, "painel1");
+		contentPane.add(telaAtendimento, "painel2");
+		contentPane.add(telaConsulta, "painel3");
+		contentPane.add(telaEncaminharInternacao, "painel4");
+		contentPane.add(telaFinalizarAtendimento, "painel5");
+		contentPane.add(telaAguardar, "painel6");
+		contentPane.add(telaInternados, "painel7");
+		contentPane.add(telaLeitos, "painel8");
+
 		JPanel panel = new JPanel();
 		telaLogo.add(panel, BorderLayout.NORTH);
 
 		JLabel lblImagem = new JLabel("");
 		lblImagem.setIcon(new ImageIcon(JanelaPrincipal.class.getResource("/imagens/medical-logo.png")));
 		panel.add(lblImagem);
-		/*
-		 * 
-		 * contentPane.add(telaAtendimento,"painel2");
-		 * contentPane.add(telaConsulta,"painel3");
-		 * contentPane.add(telaEncaminharInternacao,"painel4");
-		 * contentPane.add(telaFinalizarAtendimento,"painel5");
-		 * contentPane.add(telaAguardar,"painel6");
-		 * contentPane.add(telaInternados,"painel7");
-		 * contentPane.add(telaLeitos,"painel8");
-		 */
 
 	}
 
