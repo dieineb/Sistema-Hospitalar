@@ -82,6 +82,8 @@ public class TelaAtendimento extends JPanel {
 		
 		btnGerarAtendimento = new JButton("Gerar Atendimento");
 		add(btnGerarAtendimento, "flowx,cell 0 8 2 1");
+		btnGerarAtendimento.setActionCommand("gerar-atendimento");
+		
 		
 		fieldCPF = new JTextField();
 		add(fieldCPF, "cell 0 2 2 1,alignx center");
