@@ -128,7 +128,7 @@ public class TelaConsulta extends JPanel {
 		btnLimparTela = new JButton("Limpar Tela");
 		btnLimparTela.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				LimparTelaAtendimento()
+				LimparTelaAtendimento();
 				
 			}
 		});
