@@ -48,6 +48,7 @@ public class TelaEncaminharInternacao extends JPanel {
 		
 		btnEncaminharInternacao = new JButton("Encaminhar Internação");
 		add(btnEncaminharInternacao, "cell 0 4,alignx center");
+		btnEncaminharInternacao.setActionCommand("encaminhar-internacao");
 
 	}
 
