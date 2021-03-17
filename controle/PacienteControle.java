@@ -68,6 +68,8 @@ public class PacienteControle implements ActionListener {
 			String nomeMae = telaPaciente.getFieldMae().getText();
 			String tipoSanguineo = (String) telaPaciente.getComboBoxTipoSanguineo().getSelectedItem();
 		
+
+			
 			paciente = new Paciente(cpf, nome, dataNasc, endereco, nomePai, nomeMae, tipoSanguineo);
 		}
 
@@ -76,9 +78,10 @@ public class PacienteControle implements ActionListener {
 
 	public boolean verificarCamposPaciente() {
 
-		if (telaPaciente.getFieldCPF().getText() == "" | telaPaciente.getFieldNome().getText() == ""
-				| telaPaciente.getFieldNascimento().getText() == "" | telaPaciente.getFieldEndereco().getText() == ""
-				| telaPaciente.getFieldPai().getText() == "" | telaPaciente.getFieldMae().getText() == "") {
+		if (telaPaciente.getFieldCPF().getText().isBlank() | telaPaciente.getFieldNome().getText().isBlank()
+				| telaPaciente.getFieldNascimento().getText().isBlank() | 
+				telaPaciente.getFieldEndereco().getText().isBlank()
+				| telaPaciente.getFieldPai().getText().isBlank()| telaPaciente.getFieldMae().getText().isBlank()) {
 			return false;
 		}
 
