@@ -107,6 +107,7 @@ public class TelaConsulta extends JPanel {
 		
 		btnFinalizarAtendimento = new JButton("Finalizar Atendimento");
 		add(btnFinalizarAtendimento, "flowx,cell 0 9 2 1");
+		btnFinalizarAtendimento.setActionCommand("finalizar-atendimento");
 		
 		fieldCPF = new JTextField();
 		add(fieldCPF, "cell 0 2 2 1,alignx center");
@@ -115,6 +116,7 @@ public class TelaConsulta extends JPanel {
 		btnEncaminharInternacao = new JButton("Encaminhar Internação");
 		btnEncaminharInternacao.setActionCommand("Encaminhar Consulta");
 		add(btnEncaminharInternacao, "cell 0 9 2 1");
+		btnEncaminharInternacao.setActionCommand("encaminhar-internacao");
 		
 		JLabel labelNome = new JLabel("Nome:");
 		add(labelNome, "cell 0 2 2 1");
@@ -126,12 +128,8 @@ public class TelaConsulta extends JPanel {
 		btnLimparTela = new JButton("Limpar Tela");
 		btnLimparTela.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				fieldCPF.setText("");
-				fieldNome.setText("");
-				textAreaObservacoes.setText("");
-				textAreaQueixa.setText("");
-				textAreaAvaliacao.setText("");
-				textAreaMedicacao.setText("");
+				LimparTelaAtendimento()
+				
 			}
 		});
 		btnLimparTela.setActionCommand("Limpar Tela Atendimento");
@@ -290,12 +288,15 @@ public class TelaConsulta extends JPanel {
 	}
 
 	public void LimparTelaAtendimento() { 
+						
 		fieldCPF.setText("");
 		fieldNome.setText("");
 		textAreaObservacoes.setText("");
 		textAreaQueixa.setText("");
 		textAreaAvaliacao.setText("");
 		textAreaMedicacao.setText("");
+		comboBoxPrioridade.setSelectedItem("");
+		comboBoxAlaInternacao.setSelectedItem("");
 		
 	}
 	
