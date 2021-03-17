@@ -36,6 +36,7 @@ public class TelaFinalizarAtendimento extends JPanel {
 		
 		btnFinalizarAtendimento = new JButton("Finalizar Atendimento");
 		add(btnFinalizarAtendimento, "cell 0 4,alignx center");
+		btnFinalizarAtendimento.setActionCommand("finalizar-atendimento");
 
 	}
 
