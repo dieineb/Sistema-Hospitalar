@@ -155,6 +155,7 @@ public class JanelaPrincipal extends JFrame {
 		);
 
 		menuRelatorios.add(itemListarPacientesAguardando);
+		itemListarPacientesAguardando.setActionCommand("listar-aguardando");		//Referencia para o evento no controle
 
 		itemListarInternados = new JMenuItem("Listar pacientes internados (por ala)");
 
@@ -170,6 +171,7 @@ public class JanelaPrincipal extends JFrame {
 		);
 
 		menuRelatorios.add(itemListarInternados);
+		itemListarInternados.setActionCommand("listar-internados");		//Referencia para o evento no controle
 
 		JMenuItem itemListarLeitosVagos = new JMenuItem("Listar n\u00FAmero de leitos vagos (por ala)");
 
@@ -185,6 +187,7 @@ public class JanelaPrincipal extends JFrame {
 		);
 
 		menuRelatorios.add(itemListarLeitosVagos);
+		itemListarLeitosVagos.setActionCommand("listar-leitos");		//Referencia para o evento no controle
 
 		// instancia JPanel
 		contentPane = new JPanel();
