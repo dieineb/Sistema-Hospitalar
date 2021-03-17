@@ -55,6 +55,8 @@ public class PacienteDAO {
 	}
 
 	public static void recuperarPacientesDoTxt() {
+		File myObj = new File(UtilDAO.pathParaDataMultiSO(txtASerMudado));
+		
 		try (BufferedReader br = new BufferedReader(new FileReader(path))) {
 			String line;
 			String[] values;
