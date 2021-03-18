@@ -48,7 +48,7 @@ public class AtendimentoDAO {
 			filaDeEspera4.add(atendime);
 			return true;
 		case 5:
-
+			adicionaPacienteNaAla(atendime);
 		}
 		return false;
 	}

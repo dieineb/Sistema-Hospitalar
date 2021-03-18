@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+import dao.AtendimentoDAO;
 import dao.PacienteDAO;
 import modelo.Atendimento;
 import modelo.Paciente;
@@ -29,7 +30,8 @@ public class AtendimentoControle implements ActionListener, KeyListener {
 
 		if (e.getActionCommand().equals("gerar-atendimento")) {
 			System.out.println("GERAR ATENDIMENTO");
-			
+			Atendimento atendime = obterCamposAtendimento();
+			AtendimentoDAO.gerarAtendimento(atendime);
 
 		}
 
