@@ -49,6 +49,7 @@ public class AtendimentoDAO {
 			return true;
 		case 5:
 			adicionaPacienteNaAla(atendime);
+			return true;
 		}
 		return false;
 	}
