@@ -3,15 +3,13 @@ package controle;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 import dao.PacienteDAO;
-import modelo.Atendimento;
 import modelo.Paciente;
-import visao.JanelaPrincipal;
 import visao.TelaAtendimento;
-import visao.TelaGerenciarPaciente;
 
-public class AtendimentoControle implements ActionListener {
+public class AtendimentoControle implements ActionListener, KeyListener {
 
 	TelaAtendimento telaAtendimento;
 
@@ -20,6 +18,7 @@ public class AtendimentoControle implements ActionListener {
 		this.telaAtendimento = telaAtendimento;
 		this.telaAtendimento.getBtnGerarAtendimento().addActionListener(this);
 		this.telaAtendimento.getBtnLimparTela().addActionListener(this);
+		this.telaAtendimento.getFieldCPF().addKeyListener(this);
 
 	}
 
@@ -33,9 +32,9 @@ public class AtendimentoControle implements ActionListener {
 
 		}
 
-		if (e.getActionCommand().equals("limpar-tela")) {
+		if (e.getActionCommand().equals("Limpar Tela")) {
 
-			limparCamposPaciente();
+			telaAtendimento.LimparTelaAtendimento();;
 
 		}
 
@@ -87,6 +86,34 @@ public class AtendimentoControle implements ActionListener {
 //			telaPaciente.getComboBoxTipoSanguineo().setSelectedItem("A+");
 			
 		}
+
+	@Override
+	public void keyTyped(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void keyPressed(KeyEvent e) {
+		int key = e.getKeyCode();
+
+		if (key == KeyEvent.VK_ENTER) {
+			System.out.println("ENTER PRESSIONADO");
+			String cpf = telaAtendimento.getFieldCPF().getText();
+			Paciente p = PacienteDAO.acharPacientePorCpf(cpf);
+			if (p != null) {
+				telaAtendimento.getFieldCPF().setText(p.getCpf());
+				telaAtendimento.getFieldNome().setText(p.getNome());
+			}
+		}
+		
+	}
+
+	@Override
+	public void keyReleased(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
 
 	}
 

@@ -23,7 +23,6 @@ public class TelaAtendimento extends JPanel {
 	private JButton btnGerarAtendimento;
 	private JButton btnLimparTela;
 	private JTextField fieldData;
-	private JTextField fieldHorario;
 	private JComboBox comboBoxAlaInternacao;
 	private JComboBox comboBoxPrioridade;
 	
@@ -39,7 +38,7 @@ public class TelaAtendimento extends JPanel {
 		lblGerarAtendimento.setFont(new Font("Dialog", Font.BOLD, 20));
 		add(lblGerarAtendimento, "cell 0 0 3 1");
 		
-		JLabel labelData = new JLabel("Data:");
+		JLabel labelData = new JLabel("Data-Hora:");
 		add(labelData, "flowx,cell 1 1");
 		
 		JLabel labelCpf = new JLabel("CPF:");
@@ -121,13 +120,6 @@ public class TelaAtendimento extends JPanel {
 		fieldData = new JTextField();
 		add(fieldData, "cell 1 1");
 		fieldData.setColumns(10);
-		
-		JLabel labelHorario = new JLabel("Hora:");
-		add(labelHorario, "cell 1 1");
-		
-		fieldHorario = new JTextField();
-		add(fieldHorario, "cell 1 1");
-		fieldHorario.setColumns(10);
 
 	}
 
@@ -222,14 +214,9 @@ public class TelaAtendimento extends JPanel {
 	}
 
 
-	public JTextField getFieldHorario() {
-		return fieldHorario;
-	}
+	
 
 
-	public void setFieldHorario(JTextField fieldHorario) {
-		this.fieldHorario = fieldHorario;
-	}
 
 
 	public JComboBox getComboBoxAlaInternacao() {
@@ -257,6 +244,7 @@ public class TelaAtendimento extends JPanel {
 		fieldNome.setText("");
 		textAreaObservacoes.setText("");
 		textAreaQueixa.setText("");
+		fieldData.setText("");
 	}
 
 }
