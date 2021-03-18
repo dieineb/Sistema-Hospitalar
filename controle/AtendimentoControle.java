@@ -66,14 +66,6 @@ public class AtendimentoControle implements ActionListener, KeyListener {
 
 //		return paciente;}
 
-	public boolean verificarConsultaPorCpf() {
-
-		if (!telaAtendimento.getFieldCPF().getText().isBlank() ) {
-			return false;
-		}
-
-		return true;
-	}
 
 	public void limparCamposPaciente() {
 			
@@ -115,7 +107,7 @@ public class AtendimentoControle implements ActionListener, KeyListener {
 		
 	}
 
-	}
+}
 
 
 

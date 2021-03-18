@@ -21,7 +21,7 @@ public class PacienteDAO {
 	
 	public static Paciente acharPacientePorCpf(String cpf) {
 		for (Paciente p : pacientesNoHospital) {
-			if(p.getCpf().equals(cpf)){	
+			if(p.getCpf().trim().equals(cpf)){	
 				return p;
 			}
 		}
@@ -44,7 +44,7 @@ public class PacienteDAO {
 			String nmPai, String nmMae) {
 
 		try (BufferedWriter bw = new BufferedWriter(new FileWriter(path, true))) {
-			bw.write(String.format("%s,%s,%s,%s,%s,%s,%s", nmPaciente,cpf, dtNascimento, endereco, tpSanguineo, nmPai, nmMae));
+			bw.write(String.format("%s,%s,%s,%s,%s,%s,%s", cpf,nmPaciente, dtNascimento, endereco,nmPai, nmMae,tpSanguineo));
 			bw.newLine();
 			return true;
 
@@ -56,15 +56,20 @@ public class PacienteDAO {
 
 	public static void recuperarPacientesDoTxt() {
 		File myObj = new File(UtilDAO.pathParaDataMultiSO(txtASerMudado));
-		
 		try (BufferedReader br = new BufferedReader(new FileReader(path))) {
 			String line;
 			String[] values;
+			
 			while ((line = br.readLine()) != null) {
 				values = line.split(",");
 		   		pacientesNoHospital.add(new Paciente(values[0],values[1],
 		   				values[2],values[3], values[4],values[5],values[6]));
+		   
 			}
+			for (Paciente p : pacientesNoHospital) {
+				System.out.println(p.toString());
+			}
+			
 		} catch (IOException e) {
 			System.out.println(e.getMessage());
 		}		

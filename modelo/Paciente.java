@@ -1,6 +1,12 @@
 package modelo;
 
 public class Paciente {
+	@Override
+	public String toString() {
+		return "Paciente [cpf=" + cpf + ", nome=" + nome + ", dataNasc=" + dataNasc + ", endereco=" + endereco
+				+ ", nomePai=" + nomePai + ", nomeMae=" + nomeMae + ", tipoSanguineo=" + tipoSanguineo + "]";
+	}
+
 	private String cpf;
 	private String nome;
 	private String dataNasc;

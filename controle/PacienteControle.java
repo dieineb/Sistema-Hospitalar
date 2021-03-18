@@ -117,7 +117,7 @@ public class PacienteControle implements ActionListener, KeyListener {
 
 		if (key == KeyEvent.VK_ENTER) {
 			System.out.println("ENTER PRESSIONADO");
-			String cpf = telaPaciente.getFieldCPF().getText();
+			String cpf = telaPaciente.getFieldCPF().getText().trim();
 			Paciente p = PacienteDAO.acharPacientePorCpf(cpf);
 			if (p != null) {
 				telaPaciente.getFieldCPF().setText(p.getCpf());
@@ -127,6 +127,7 @@ public class PacienteControle implements ActionListener, KeyListener {
 				telaPaciente.getFieldPai().setText(p.getNomePai());
 				telaPaciente.getFieldMae().setText(p.getNomeMae());
 				telaPaciente.getComboBoxTipoSanguineo().setSelectedItem(p.getTipoSanguineo());
+		
 			}
 		}
 
